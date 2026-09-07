@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}Financial Glossary — Market Digest{% endblock %}
+{% block description %}Plain-English definitions of {{ total }} financial terms — automatically grown by the Market Digest AI pipeline. From P/E Ratio to Yield Curve.{% endblock %}
+{% block nav_glossary %}active{% endblock %}
+
+{% block content %}
+
+<section class="glossary-hero" aria-labelledby="glossary-heading">
+  <div class="container">
+    <h1 id="glossary-heading" class="section-title">
+      <span class="section-icon" aria-hidden="true">📖</span> Financial Glossary
+    </h1>
+    <p class="glossary-intro">
+      {{ total }} terms and counting — automatically grown each day by the AI pipeline.
+      Terms are linked inline in every daily report.
+    </p>
+
+    <!-- Search -->
+    <div class="glossary-search-wrap">
+      <label for="glossary-search" class="sr-only">Search glossary</label>
+      <input
+        id="glossary-search"
+        type="search"
+        class="glossary-search"
+        placeholder="Search terms…"
+        aria-label="Search glossary terms"
+        autocomplete="off"
+      />
+    </div>
+
+    <!-- Letter navigation -->
+    <nav class="letter-nav" aria-label="Glossary alphabet navigation">
+      {% for letter in letters %}
+      <a href="#letter-{{ letter }}" class="letter-nav-item" aria-label="Jump to {{ letter }}">{{ letter }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</section>
+
+<div class="container page-body">
+  <div id="glossary-content">
+    {% for letter in letters %}
+    <section class="glossary-letter-section" aria-labelledby="letter-{{ letter }}-heading">
+      <h2 id="letter-{{ letter }}" class="glossary-letter-heading">{{ letter }}</h2>
+      <dl class="glossary-terms">
+        {% for entry in grouped[letter] %}
+        <div class="glossary-entry" id="{{ entry.slug }}" data-term="{{ entry.term | lower }}" data-category="{{ entry.category }}">
+          <dt class="glossary-term">
+            {{ entry.term }}
+            <span class="glossary-category-badge">{{ entry.category }}</span>
+          </dt>
+          <dd class="glossary-definition">{{ entry.definition }}</dd>
+          <div class="glossary-entry-meta">
+            <span class="entry-added">Added {{ entry.added_date }}</span>
+            <a href="#{{ entry.slug }}" class="entry-anchor" aria-label="Permalink for {{ entry.term }}">#</a>
+          </div>
+        </div>
+        {% endfor %}
+      </dl>
+    </section>
+    {% endfor %}
+
+    <div id="glossary-no-results" class="glossary-empty" style="display:none" aria-live="polite">
+      <span aria-hidden="true">🔍</span> No matching terms found.
+    </div>
+  </div>
+</div>
+{% endblock %}

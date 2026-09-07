@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Market Digest — Today's Market Summary{% endblock %}
+{% block description %}AI-powered daily Indian &amp; global market digest. NIFTY 50, Sensex, S&amp;P 500, sector analysis, and financial glossary.{% endblock %}
+{% block og_title %}Market Digest — Today's Summary{% endblock %}
+{% block nav_home %}active{% endblock %}
+
+{% block content %}
+
+<!-- ── Hero ──────────────────────────────────────────────────────────── -->
+<section class="home-hero" aria-labelledby="home-heading">
+  <div class="container home-hero-inner">
+    <h1 id="home-heading" class="home-hero-title">
+      <span class="hero-gradient-text">Market Digest</span>
+    </h1>
+    <p class="home-hero-sub">
+      Daily AI-powered analysis of Indian &amp; global markets.
+      Delivered every weekday at midnight IST.
+    </p>
+    <a href="/{{ date_str }}.html" class="btn btn-primary">
+      Read Today's Report →
+    </a>
+  </div>
+</section>
+
+<div class="container page-body">
+
+  <!-- ── Latest at a glance ────────────────────────────────────────────── -->
+  <section class="section" aria-labelledby="latest-heading">
+    <h2 id="latest-heading" class="section-title">
+      <span class="section-icon" aria-hidden="true">📅</span> Latest — {{ date_display }}
+    </h2>
+
+    <div class="glance-card sentiment-{{ report.overall_sentiment }}">
+      <div class="glance-header">
+        <span class="sentiment-badge sentiment-badge--{{ report.overall_sentiment }}">
+          {% if report.overall_sentiment == 'bullish' %}🟢 Bullish
+          {% elif report.overall_sentiment == 'bearish' %}🔴 Bearish
+          {% else %}🟡 Neutral{% endif %}
+        </span>
+        <a href="/{{ date_str }}.html" class="glance-readmore">Read full report →</a>
+      </div>
+      <ul class="tldr-list" role="list">
+        {% for bullet in report.tldr %}
+        <li class="tldr-item">
+          <span class="tldr-bullet" aria-hidden="true">→</span>
+          {{ bullet }}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── Archive ───────────────────────────────────────────────────────── -->
+  {% if archive_dates %}
+  <section class="section" aria-labelledby="archive-heading">
+    <h2 id="archive-heading" class="section-title">
+      <span class="section-icon" aria-hidden="true">🗂️</span> Past Reports
+    </h2>
+    <ul class="archive-list" role="list">
+      {% for d in archive_dates %}
+      <li class="archive-item">
+        <a href="/{{ d }}.html" class="archive-link">
+          <span class="archive-date">{{ d }}</span>
+          <span class="archive-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+</div>
+{% endblock %}

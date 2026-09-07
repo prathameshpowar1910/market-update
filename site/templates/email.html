@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📊 Market Digest — {{ date_display }}</title>
+  <!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
+</head>
+<body style="margin:0;padding:0;background:#080d1a;font-family:Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased;">
+
+<!-- Preheader (hidden) -->
+<div style="display:none;max-height:0;overflow:hidden;mso-hide:all;">
+  {{ report.overall_sentiment | capitalize }} market today. {{ report.tldr[0] if report.tldr else '' }}
+</div>
+
+<!-- Wrapper -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#080d1a" role="presentation">
+<tr>
+<td align="center" style="padding:32px 16px;">
+
+  <!-- Container -->
+  <table width="600" border="0" cellspacing="0" cellpadding="0" style="max-width:600px;width:100%;" role="presentation">
+
+    <!-- ── Header ─────────────────────────────────────────────────── -->
+    <tr>
+      <td style="background:linear-gradient(135deg,#111827,#151e33);border-radius:16px 16px 0 0;padding:32px 40px;border-bottom:1px solid #1e2d4d;">
+        <table width="100%" role="presentation" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+              <p style="margin:0 0 4px;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:#64748b;font-weight:600;">Daily Digest</p>
+              <h1 style="margin:0;font-size:26px;font-weight:700;color:#e8ecf5;letter-spacing:-0.02em;">📊 Market Digest</h1>
+              <p style="margin:8px 0 0;font-size:14px;color:#94a3b8;">{{ date_display }}</p>
+            </td>
+            <td align="right" valign="top">
+              <!-- Sentiment badge -->
+              {% if report.overall_sentiment == 'bullish' %}
+              <span style="display:inline-block;padding:6px 14px;background:#052e0d;border:1px solid #15803d;border-radius:100px;font-size:13px;font-weight:600;color:#22c55e;">🟢 Bullish</span>
+              {% elif report.overall_sentiment == 'bearish' %}
+              <span style="display:inline-block;padding:6px 14px;background:#2d0707;border:1px solid #b91c1c;border-radius:100px;font-size:13px;font-weight:600;color:#ef4444;">🔴 Bearish</span>
+              {% else %}
+              <span style="display:inline-block;padding:6px 14px;background:#2d1f04;border:1px solid #92400e;border-radius:100px;font-size:13px;font-weight:600;color:#f59e0b;">🟡 Neutral</span>
+              {% endif %}
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- ── TL;DR ───────────────────────────────────────────────────── -->
+    <tr>
+      <td style="background:#0d1425;padding:32px 40px;border-bottom:1px solid #1e2d4d;">
+        <h2 style="margin:0 0 20px;font-size:16px;font-weight:700;color:#e8ecf5;letter-spacing:-0.01em;">⚡ TL;DR</h2>
+        {% for bullet in report.tldr %}
+        <table width="100%" role="presentation" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:10px;">
+          <tr>
+            <td width="20" valign="top" style="color:#6366f1;font-weight:700;padding-top:1px;font-size:14px;">→</td>
+            <td style="font-size:14px;color:#94a3b8;line-height:1.6;">{{ bullet }}</td>
+          </tr>
+        </table>
+        {% endfor %}
+      </td>
+    </tr>
+
+    <!-- ── Indian Indices ────────────────────────────────────────── -->
+    <tr>
+      <td style="background:#080d1a;padding:32px 40px;border-bottom:1px solid #1e2d4d;">
+        <h2 style="margin:0 0 20px;font-size:16px;font-weight:700;color:#e8ecf5;">🇮🇳 Indian Markets</h2>
+        <table width="100%" role="presentation" border="0" cellspacing="0" cellpadding="0">
+          {% for idx in india.indices %}
+          <tr>
+            <td style="padding:10px 16px;background:#151e33;border:1px solid #1e2d4d;border-radius:8px;margin-bottom:8px;display:block;margin-bottom:8px;">
+              <table width="100%" role="presentation" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td>
+                    <span style="font-size:11px;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;">{{ idx.display_name }}</span><br>
+                    <span style="font-size:20px;font-weight:700;color:#e8ecf5;letter-spacing:-0.02em;">{{ "{:,.2f}".format(idx.price) }}</span>
+                  </td>
+                  <td align="right">
+                    {% if idx.is_positive %}
+                    <span style="color:#22c55e;font-weight:700;font-size:14px;">▲ {{ "{:+.2f}".format(idx.change_pct) }}%</span>
+                    {% else %}
+                    <span style="color:#ef4444;font-weight:700;font-size:14px;">▼ {{ "%.2f" | format(idx.change_pct) }}%</span>
+                    {% endif %}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr><td height="8"></td></tr>
+          {% endfor %}
+        </table>
+        <p style="margin:20px 0 0;font-size:14px;color:#94a3b8;line-height:1.75;border-left:3px solid #6366f1;padding-left:16px;">{{ report.india_summary[:400] }}{% if report.india_summary|length > 400 %}…{% endif %}</p>
+      </td>
+    </tr>
+
+    <!-- ── Global Markets ───────────────────────────────────────── -->
+    <tr>
+      <td style="background:#0d1425;padding:32px 40px;border-bottom:1px solid #1e2d4d;">
+        <h2 style="margin:0 0 20px;font-size:16px;font-weight:700;color:#e8ecf5;">🌍 Global Markets</h2>
+        <table width="100%" role="presentation" border="0" cellspacing="0" cellpadding="0">
+          {% for idx in intl.indices %}
+          <tr>
+            <td style="padding:6px 0;border-bottom:1px solid #1e2d4d;">
+              <table width="100%" role="presentation" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td style="font-size:13px;color:#94a3b8;">{{ idx.display_name }}</td>
+                  <td align="right" style="font-size:13px;font-weight:700;{% if idx.is_positive %}color:#22c55e;{% else %}color:#ef4444;{% endif %}">
+                    {{ "{:,.2f}".format(idx.price) }}
+                    ({{ "{:+.2f}".format(idx.change_pct) }}%)
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          {% endfor %}
+          {% for fx in intl.forex %}
+          <tr>
+            <td style="padding:6px 0;border-bottom:1px solid #1e2d4d;">
+              <table width="100%" role="presentation" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td style="font-size:13px;color:#94a3b8;">{{ fx.pair }}</td>
+                  <td align="right" style="font-size:13px;font-weight:700;color:#e8ecf5;">{{ "%.4f" | format(fx.rate) }}</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </td>
+    </tr>
+
+    <!-- ── Key Events ───────────────────────────────────────────── -->
+    {% if report.key_events %}
+    <tr>
+      <td style="background:#080d1a;padding:32px 40px;border-bottom:1px solid #1e2d4d;">
+        <h2 style="margin:0 0 20px;font-size:16px;font-weight:700;color:#e8ecf5;">📌 Key Events</h2>
+        {% for event in report.key_events %}
+        <table width="100%" role="presentation" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:12px;background:#151e33;border:1px solid #1e2d4d;border-radius:8px;">
+          <tr>
+            <td style="padding:16px;">
+              <p style="margin:0 0 6px;font-size:14px;font-weight:600;color:#e8ecf5;">
+                {% if event.impact == 'high' %}🔴{% elif event.impact == 'medium' %}🟡{% else %}🟢{% endif %}
+                {{ event.headline }}
+              </p>
+              <p style="margin:0;font-size:13px;color:#94a3b8;line-height:1.6;">{{ event.detail }}</p>
+            </td>
+          </tr>
+        </table>
+        {% endfor %}
+      </td>
+    </tr>
+    {% endif %}
+
+    <!-- ── CTA ──────────────────────────────────────────────────── -->
+    <tr>
+      <td style="background:#0d1425;padding:32px 40px;text-align:center;border-bottom:1px solid #1e2d4d;">
+        <a href="https://yourusername.github.io/market-update/{{ report.date }}.html"
+           style="display:inline-block;padding:14px 32px;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;font-size:14px;font-weight:600;border-radius:12px;text-decoration:none;letter-spacing:0.01em;">
+          Read Full Report →
+        </a>
+        <p style="margin:12px 0 0;font-size:12px;color:#64748b;">With sector analysis, top movers, and news</p>
+      </td>
+    </tr>
+
+    <!-- ── Footer / Disclaimer ──────────────────────────────────── -->
+    <tr>
+      <td style="background:#080d1a;padding:24px 40px;border-radius:0 0 16px 16px;text-align:center;">
+        <p style="margin:0 0 8px;font-size:11px;color:#475569;line-height:1.7;">{{ disclaimer }}</p>
+        <p style="margin:0;font-size:11px;color:#334155;">Market Digest · Auto-generated by AI pipeline</p>
+      </td>
+    </tr>
+
+  </table><!-- /Container -->
+
+</td>
+</tr>
+</table><!-- /Wrapper -->
+
+</body>
+</html>

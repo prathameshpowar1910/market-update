@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0f1e" />
+
+  <!-- SEO -->
+  <title>{% block title %}Market Digest{% endblock %}</title>
+  <meta name="description" content="{% block description %}Your daily AI-powered Indian &amp; global market summary.{% endblock %}" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{% block og_title %}Market Digest{% endblock %}" />
+  <meta property="og:description" content="{% block og_description %}Your daily AI-powered Indian &amp; global market summary.{% endblock %}" />
+  <meta property="og:site_name" content="Market Digest" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/static/css/styles.css" />
+
+  {% block head_extra %}{% endblock %}
+</head>
+<body>
+
+  <!-- ── Navigation ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="/" class="nav-logo" aria-label="Market Digest home">
+        <span class="logo-icon" aria-hidden="true">📊</span>
+        <span class="logo-text">Market Digest</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="/" class="nav-link {% block nav_home %}{% endblock %}">Today</a></li>
+        <li><a href="/glossary.html" class="nav-link {% block nav_glossary %}{% endblock %}">Glossary</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ── Main content ──────────────────────────────────────────────────── -->
+  <main id="main-content" role="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- ── Footer ────────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="footer-brand">
+        <span aria-hidden="true">📊</span> Market Digest
+      </p>
+      <p class="footer-disclaimer">
+        This site is for informational purposes only and does not constitute financial advice.
+        Data is sourced from Alpha Vantage &amp; Tiingo. AI analysis by Google Gemini.
+      </p>
+      <p class="footer-copy">
+        &copy; {{ range(2026, 2030) | list | last | default(2026) }} Market Digest.
+        Generated automatically by GitHub Actions.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ── JS ────────────────────────────────────────────────────────────── -->
+  <script src="/static/js/app.js" defer></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

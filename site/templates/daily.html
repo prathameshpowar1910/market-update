@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+
+{% block title %}Market Digest — {{ date_display }}{% endblock %}
+{% block description %}Today's AI-powered market summary: {{ report.overall_sentiment }} sentiment. {{ report.tldr[0] if report.tldr else '' }}{% endblock %}
+{% block og_title %}Market Digest — {{ date_display }}{% endblock %}
+{% block og_description %}{{ report.tldr[0] if report.tldr else 'Today\'s market summary' }}{% endblock %}
+{% block nav_home %}active{% endblock %}
+
+{% block content %}
+
+<!-- ── Hero / Sentiment Banner ─────────────────────────────────────────── -->
+<section class="hero-banner sentiment-{{ report.overall_sentiment }}" aria-labelledby="report-heading">
+  <div class="container hero-inner">
+    <div class="hero-meta">
+      <time class="hero-date" datetime="{{ date_str }}">{{ date_display }}</time>
+      <span class="sentiment-badge sentiment-badge--{{ report.overall_sentiment }}">
+        {% if report.overall_sentiment == 'bullish' %}🟢 Bullish
+        {% elif report.overall_sentiment == 'bearish' %}🔴 Bearish
+        {% else %}🟡 Neutral{% endif %}
+      </span>
+    </div>
+    <h1 id="report-heading" class="hero-title">Daily Market Report</h1>
+    <p class="hero-subtitle">AI-powered analysis of Indian &amp; global markets</p>
+  </div>
+</section>
+
+<div class="container page-body">
+
+  <!-- ── TL;DR ────────────────────────────────────────────────────────── -->
+  <section class="section" aria-labelledby="tldr-heading">
+    <h2 id="tldr-heading" class="section-title">
+      <span class="section-icon" aria-hidden="true">⚡</span> TL;DR
+    </h2>
+    <ul class="tldr-list" role="list">
+      {% for bullet in report.tldr %}
+      <li class="tldr-item">
+        <span class="tldr-bullet" aria-hidden="true">→</span>
+        {{ bullet }}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <!-- ── Indian Market Indices ────────────────────────────────────────── -->
+  <section class="section" aria-labelledby="india-indices-heading">
+    <h2 id="india-indices-heading" class="section-title">
+      <span class="section-icon" aria-hidden="true">🇮🇳</span> Indian Markets
+    </h2>
+    <div class="index-grid">
+      {% for idx in india.indices %}
+      <article class="index-card direction-{{ idx.direction.value }}" aria-label="{{ idx.display_name }} index card">
+        <span class="index-name">{{ idx.display_name }}</span>
+        <span class="index-price">{{ "{:,.2f}".format(idx.price) }}</span>
+        <span class="index-change">
+          {{ "▲" if idx.is_positive else "▼" }}
+          {{ "{:+.2f}".format(idx.change) }}
+          ({{ "{:+.2f}".format(idx.change_pct) }}%)
+        </span>
+      </article>
+      {% endfor %}
+    </div>
+
+    <!-- India Summary -->
+    <div class="narrative-block">
+      {% for para in report.india_summary.split('\n\n') %}
+      {% if para.strip() %}
+      <p>{{ para.strip() }}</p>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- ── Sectors ───────────────────────────────────────────────────────── -->
+  {% if india.sectors %}
+  <section class="section" aria-labelledby="sectors-heading">
+    <h2 id="sectors-heading" class="section-title">
+      <span class="section-icon" aria-hidden="true">🏭</span> Sector Performance
+    </h2>
+    <div class="sector-grid">
+      {% for sector in india.sectors %}
+      {% set ai_insight = report.sectors | selectattr("name", "equalto", sector.name) | first | default(None) %}
+      <article class="sector-card direction-{{ sector.direction.value }}" aria-label="{{ sector.name }} sector">
+        <div class="sector-header">
+          <span class="sector-name">{{ sector.name }}</span>
+          <span class="sector-pct direction-{{ sector.direction.value }}">
+            {{ "{:+.2f}".format(sector.change_pct) }}%
+          </span>
+        </div>
+        <div class="sector-bar-track" aria-hidden="true">
+          <div class="sector-bar direction-{{ sector.direction.value }}"
+               style="width: {{ [sector.change_pct | abs * 10, 100] | min }}%"></div>
+        </div>
+        {% if ai_insight %}
+        <p class="sector-insight">{{ ai_insight.performance }}</p>
+        <span class="outlook-badge outlook-{{ ai_insight.outlook }}">{{ ai_insight.outlook | capitalize }}</span>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ── Top Movers ───────────────────────────────────────────────────── -->
+  {% if india.top_gainers or india.top_losers %}
+  <section class="section" aria-labelledby="movers-heading">
+    <h2 id="movers-heading" class="section-title">
+      <span class="section-icon" aria-hidden="true">🚀</span> Top Movers
+    </h2>
+    <div class="movers-grid">
+      {% if india.top_gainers %}
+      <div class="movers-col">
+        <h3 class="movers-col-title gainers-title">Top Gainers</h3>
+        {% for stock in india.top_gainers %}
+        <div class="mover-card direction-up">
+          <span class="mover-name">{{ stock.name }}</span>
+          <span class="mover-pct">▲ {{ "{:+.2f}".format(stock.change_pct) }}%</span>
+          <span class="mover-price">₹{{ "{:,.2f}".format(stock.price) }}</span>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      {% if india.top_losers %}
+      <div class="movers-col">
+        <h3 class="movers-col-title losers-title">Top Losers</h3>
+        {% for stock in india.top_losers %}
+        <div class="mover-card direction-down">
+          <span class="mover-name">{{ stock.name }}</span>
+          <span class="mover-pct">▼ {{ "{:.2f}".format(stock.change_pct) }}%</span>
+          <span class="mover-price">₹{{ "{:,.2f}".format(stock.price) }}</span>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ── International Markets ────────────────────────────────────────── -->
+  <section class="section" aria-labelledby="intl-heading">
+    <h2 id="intl-heading" class="section-title">
+      <span class="section-icon" aria-hidden="true">🌍</span> Global Markets
+    </h2>
+    <div class="index-grid">
+      {% for idx in intl.indices %}
+      <article class="index-card direction-{{ idx.direction.value }}" aria-label="{{ idx.display_name }} index card">
+        <span class="index-name">{{ idx.display_name }}</span>
+        <span class="index-price">{{ "{:,.2f}".format(idx.price) }}</span>
+        <span class="index-change">
+          {{ "▲" if idx.is_positive else "▼" }}
+          {{ "{:+.2f}".format(idx.change) }}
+          ({{ "{:+.2f}".format(idx.change_pct) }}%)
+        </span>
+      </article>
+      {% endfor %}
+
+      <!-- Forex / Commodities as mini-cards -->
+      {% for fx in intl.forex %}
+      <article class="index-card index-card--small" aria-label="{{ fx.pair }} exchange rate">
+        <span class="index-name">{{ fx.pair }}</span>
+        <span class="index-price">{{ "%.4f" | format(fx.rate) }}</span>
+      </article>
+      {% endfor %}
+
+      {% for c in intl.commodities %}
+      <article class="index-card index-card--small" aria-label="{{ c.name }} price">
+        <span class="index-name">{{ c.name }}</span>
+        <span class="index-price">${{ "{:,.2f}".format(c.price) }}</span>
+        {% if c.change_pct is not none %}
+        <span class="index-change {% if c.change_pct >= 0 %}direction-up{% else %}direction-down{% endif %}">
+          {{ "{:+.2f}".format(c.change_pct) }}%
+        </span>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="narrative-block">
+      {% for para in report.international_summary.split('\n\n') %}
+      {% if para.strip() %}
+      <p>{{ para.strip() }}</p>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- ── Key Events ────────────────────────────────────────────────────── -->
+  {% if report.key_events %}
+  <section class="section" aria-labelledby="events-heading">
+    <h2 id="events-heading" class="section-title">
+      <span class="section-icon" aria-hidden="true">📌</span> Key Events
+    </h2>
+    <div class="events-list">
+      {% for event in report.key_events %}
+      <article class="event-card impact-{{ event.impact }}" aria-label="Market event: {{ event.headline }}">
+        <div class="event-header">
+          <span class="impact-dot impact-{{ event.impact }}" aria-label="{{ event.impact }} impact" title="{{ event.impact | capitalize }} Impact"></span>
+          <h3 class="event-headline">{{ event.headline }}</h3>
+        </div>
+        <p class="event-detail">{{ event.detail }}</p>
+        <span class="impact-label">{{ event.impact | capitalize }} Impact</span>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ── Today's News ──────────────────────────────────────────────────── -->
+  {% if news %}
+  <section class="section" aria-labelledby="news-heading">
+    <h2 id="news-heading" class="section-title">
+      <span class="section-icon" aria-hidden="true">📰</span> Today's Market News
+    </h2>
+    <ul class="news-list" role="list">
+      {% for item in news %}
+      <li class="news-item">
+        <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" class="news-link">
+          <span class="news-title">{{ item.title }}</span>
+          <span class="news-meta">
+            <span class="news-source">{{ item.source }}</span>
+            {% if item.published_at %}
+            <time class="news-date" datetime="{{ item.published_at.isoformat() }}">{{ item.display_date }}</time>
+            {% endif %}
+          </span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+</div><!-- /.container -->
+{% endblock %}

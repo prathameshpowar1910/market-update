@@ -1,0 +1,122 @@
+ai:
+  provider: gemini
+  model: gemini-1.5-flash
+  temperature: 0.3
+  max_retries: 3
+  retry_delay_seconds: 5
+
+market:
+  # Alpha Vantage symbols
+  india:
+    indices:
+      - symbol: "BSE:SENSEX"
+        name: "Sensex"
+        display_name: "Sensex"
+      - symbol: "NSE:NIFTY50"
+        name: "Nifty 50"
+        display_name: "NIFTY 50"
+    # Nifty sector ETF symbols (NSE)
+    sectors:
+      - symbol: "NIFTYBK.NS"
+        name: "Nifty Bank"
+      - symbol: "NIFTYIT.NS"
+        name: "Nifty IT"
+      - symbol: "NIFTYAUTO.NS"
+        name: "Nifty Auto"
+      - symbol: "NIFTYFMCG.NS"
+        name: "Nifty FMCG"
+      - symbol: "NIFTYPHARMA.NS"
+        name: "Nifty Pharma"
+      - symbol: "NIFTYMETAL.NS"
+        name: "Nifty Metal"
+      - symbol: "NIFTYREALTY.NS"
+        name: "Nifty Realty"
+      - symbol: "NIFTYENERGY.NS"
+        name: "Nifty Energy"
+    top_movers_count: 5
+
+  international:
+    indices:
+      - symbol: "SPY"
+        name: "S&P 500"
+        display_name: "S&P 500"
+      - symbol: "QQQ"
+        name: "NASDAQ"
+        display_name: "NASDAQ"
+      - symbol: "DIA"
+        name: "Dow Jones"
+        display_name: "Dow Jones"
+    commodities:
+      - symbol: "GLD"
+        name: "Gold"
+      - symbol: "USO"
+        name: "Crude Oil"
+    forex:
+      - symbol: "USD/INR"
+        name: "USD/INR"
+        from_currency: "USD"
+        to_currency: "INR"
+
+news:
+  provider: tiingo          # tiingo | rss
+  tiingo:
+    tags:
+      - "india"
+      - "stock market"
+      - "nifty"
+      - "sensex"
+      - "economy"
+    limit: 30
+    deduplicate: true
+    max_age_hours: 24
+  rss:
+    feeds:
+      - url: "https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms"
+        source: "Economic Times"
+      - url: "https://www.moneycontrol.com/rss/marketreports.xml"
+        source: "Moneycontrol"
+      - url: "https://feeds.reuters.com/reuters/businessNews"
+        source: "Reuters"
+      - url: "http://feeds.bbci.co.uk/news/business/rss.xml"
+        source: "BBC Business"
+    max_items_per_feed: 10
+    max_age_hours: 24
+  final_limit: 15           # top N items sent to Gemini
+
+glossary:
+  allowed_categories:
+    - basics
+    - valuation
+    - technical-analysis
+    - fundamentals
+    - derivatives
+    - macro
+    - fixed-income
+    - commodities
+    - market-structure
+  min_term_length: 2
+  max_term_length: 60
+  max_new_terms_per_run: 10
+
+email:
+  from_name: "Market Digest"
+  from_address: "digest@yourdomain.com"
+  subject_template: "📊 Market Digest — {date}"
+  disclaimer: >
+    This newsletter is for informational purposes only and does not constitute
+    financial advice. Always do your own research before making investment decisions.
+
+site:
+  title: "Market Digest"
+  description: "Your daily AI-powered Indian & global market summary"
+  base_url: "https://yourusername.github.io/market-update"
+  archive_limit: 30          # number of past reports shown on index
+
+schedule:
+  # 18:30 UTC = midnight IST (covers India market close)
+  cron: "30 18 * * 1-5"     # weekdays only
+  timezone_display: "IST (UTC+5:30)"
+
+output:
+  generated_dir: "site/generated"
+  data_dir: "data/processed"
