@@ -11,6 +11,10 @@ on:
 permissions:
   contents: write   # needed to push to gh-pages branch
 
+concurrency:
+  group: daily-market-digest
+  cancel-in-progress: false
+
 jobs:
   generate:
     name: Generate & Deploy

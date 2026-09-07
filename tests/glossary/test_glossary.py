@@ -49,6 +49,32 @@ class TestGlossaryManager:
         gm.load()
         assert len(gm.all_entries()) == 2
 
+    def test_legacy_entries_are_preserved_when_adding(self, tmp_path):
+        f = tmp_path / "glossary.json"
+        f.write_text(json.dumps([
+            {
+                "term": "Legacy Term",
+                "slug": "legacy-term",
+                "definition": "An entry from the original glossary format.",
+                "category": "basics",
+            }
+        ]), encoding="utf-8")
+        gm = GlossaryManager(f)
+        gm.load()
+        gm.add_entries([
+            GlossaryEntry(
+                term="New Term",
+                slug="new-term",
+                definition="An entry added by the current pipeline.",
+                category="basics",
+                added_date="2026-09-07",
+            )
+        ])
+        gm.save()
+
+        saved_terms = {entry["term"] for entry in json.loads(f.read_text(encoding="utf-8"))}
+        assert saved_terms == {"Legacy Term", "New Term"}
+
     def test_existing_terms_normalised(self, tmp_glossary):
         gm = GlossaryManager(tmp_glossary)
         gm.load()

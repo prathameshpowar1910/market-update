@@ -17,6 +17,27 @@ VALID_CATEGORIES = frozenset({
     "fixed-income",
     "commodities",
     "market-structure",
+    "stocks",
+    "primary-market",
+    "corporate-actions",
+    "accounting",
+    "trading",
+    "options-greeks",
+    "bonds",
+    "money-market",
+    "mutual-funds",
+    "portfolio",
+    "risk",
+    "india-markets",
+    "india-finance",
+    "india-investments",
+    "research",
+    "alternative-investments",
+    "currencies",
+    "private-markets",
+    "personal-finance",
+    "taxation",
+    "financial-reporting",
 })
 
 
@@ -39,7 +60,8 @@ class GlossaryEntry(BaseModel):
     slug: str = ""
     definition: str
     category: str
-    added_date: str
+    # Older glossary files predate this field; keep those entries loadable.
+    added_date: str = ""
 
     @field_validator("term")
     @classmethod
