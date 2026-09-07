@@ -165,23 +165,23 @@ class TestLinker:
     def test_term_is_linked(self, entries):
         html = "<p>Today's market breadth improved significantly.</p>"
         out = link_glossary_terms(html, entries)
-        assert 'href="/glossary.html#market-breadth"' in out
+        assert 'href="glossary.html#market-breadth"' in out
 
     def test_only_first_occurrence(self, entries):
         html = "<p>Market breadth is good. Market breadth was high.</p>"
         out = link_glossary_terms(html, entries, first_only=True)
-        assert out.count('href="/glossary.html#market-breadth"') == 1
+        assert out.count('href="glossary.html#market-breadth"') == 1
 
     def test_existing_link_not_double_linked(self, entries):
         html = '<a href="/foo">Market Breadth</a> is the market breadth measure.'
         out = link_glossary_terms(html, entries)
         # The one inside <a> should NOT get re-linked
-        assert out.count('href="/glossary.html#market-breadth"') <= 1
+        assert out.count('href="glossary.html#market-breadth"') <= 1
 
     def test_case_insensitive_match(self, entries):
         html = "<p>MARKET BREADTH was positive.</p>"
         out = link_glossary_terms(html, entries)
-        assert 'href="/glossary.html#market-breadth"' in out
+        assert 'href="glossary.html#market-breadth"' in out
 
     def test_no_entries_returns_unchanged(self):
         html = "<p>Some text here.</p>"

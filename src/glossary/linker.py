@@ -3,7 +3,7 @@ Glossary linker — post-processes HTML to hyperlink glossary terms.
 
 Example:
   Input:  "Today's market breadth improved."
-  Output: 'Today's <a href="/glossary.html#market-breadth">market breadth</a> improved.'
+    Output: 'Today's <a href="glossary.html#market-breadth">market breadth</a> improved.'
 
 Rules:
   • Only links the FIRST occurrence of each term per HTML block
@@ -58,7 +58,7 @@ def _restore_regions(html: str, token_map: dict[str, str]) -> str:
 def link_glossary_terms(
     html: str,
     entries: list[GlossaryEntry],
-    glossary_path: str = "/glossary.html",
+    glossary_path: str = "glossary.html",
     first_only: bool = True,
 ) -> str:
     """

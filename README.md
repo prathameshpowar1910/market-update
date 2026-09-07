@@ -103,7 +103,7 @@ Set these in your repository **Settings → Secrets → Actions**:
 1. Go to **Settings → Pages**
 2. Set **Source** to **Deploy from a branch**
 3. Set **Branch** to `gh-pages`, folder `/` (root)
-4. Save — your site will be at `https://yourusername.github.io/market-update/`
+4. Save — your site will be at `https://prathameshpowar1910.github.io/market-update/`
 
 ### Manual trigger
 

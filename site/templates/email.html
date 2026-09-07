@@ -4,6 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>📊 Market Digest — {{ date_display }}</title>
+  <style>
+    @media only screen and (max-width: 620px) {
+      .email-shell { width: 100% !important; }
+      .email-pad { padding-left: 22px !important; padding-right: 22px !important; }
+      .email-title { font-size: 23px !important; }
+      .email-stat { display: block !important; width: 100% !important; box-sizing: border-box; margin-bottom: 8px; }
+      .email-cta { display: block !important; padding-left: 18px !important; padding-right: 18px !important; }
+    }
+  </style>
   <!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
 </head>
 <body style="margin:0;padding:0;background:#080d1a;font-family:Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased;">
@@ -19,16 +28,16 @@
 <td align="center" style="padding:32px 16px;">
 
   <!-- Container -->
-  <table width="600" border="0" cellspacing="0" cellpadding="0" style="max-width:600px;width:100%;" role="presentation">
+  <table class="email-shell" width="600" border="0" cellspacing="0" cellpadding="0" style="max-width:600px;width:100%;" role="presentation">
 
     <!-- ── Header ─────────────────────────────────────────────────── -->
     <tr>
-      <td style="background:linear-gradient(135deg,#111827,#151e33);border-radius:16px 16px 0 0;padding:32px 40px;border-bottom:1px solid #1e2d4d;">
+      <td class="email-pad" style="background:linear-gradient(135deg,#111827,#151e33);border-radius:16px 16px 0 0;padding:32px 40px;border-bottom:1px solid #1e2d4d;">
         <table width="100%" role="presentation" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td>
               <p style="margin:0 0 4px;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:#64748b;font-weight:600;">Daily Digest</p>
-              <h1 style="margin:0;font-size:26px;font-weight:700;color:#e8ecf5;letter-spacing:-0.02em;">📊 Market Digest</h1>
+              <h1 class="email-title" style="margin:0;font-size:26px;font-weight:700;color:#e8ecf5;letter-spacing:-0.02em;">📊 Market Digest</h1>
               <p style="margin:8px 0 0;font-size:14px;color:#94a3b8;">{{ date_display }}</p>
             </td>
             <td align="right" valign="top">
@@ -48,7 +57,7 @@
 
     <!-- ── TL;DR ───────────────────────────────────────────────────── -->
     <tr>
-      <td style="background:#0d1425;padding:32px 40px;border-bottom:1px solid #1e2d4d;">
+      <td class="email-pad" style="background:#0d1425;padding:32px 40px;border-bottom:1px solid #1e2d4d;">
         <h2 style="margin:0 0 20px;font-size:16px;font-weight:700;color:#e8ecf5;letter-spacing:-0.01em;">⚡ TL;DR</h2>
         {% for bullet in report.tldr %}
         <table width="100%" role="presentation" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:10px;">
@@ -63,12 +72,12 @@
 
     <!-- ── Indian Indices ────────────────────────────────────────── -->
     <tr>
-      <td style="background:#080d1a;padding:32px 40px;border-bottom:1px solid #1e2d4d;">
+      <td class="email-pad" style="background:#080d1a;padding:32px 40px;border-bottom:1px solid #1e2d4d;">
         <h2 style="margin:0 0 20px;font-size:16px;font-weight:700;color:#e8ecf5;">🇮🇳 Indian Markets</h2>
         <table width="100%" role="presentation" border="0" cellspacing="0" cellpadding="0">
           {% for idx in india.indices %}
           <tr>
-            <td style="padding:10px 16px;background:#151e33;border:1px solid #1e2d4d;border-radius:8px;margin-bottom:8px;display:block;margin-bottom:8px;">
+            <td class="email-stat" style="padding:10px 16px;background:#151e33;border:1px solid #1e2d4d;border-radius:8px;margin-bottom:8px;display:block;">
               <table width="100%" role="presentation" border="0" cellspacing="0" cellpadding="0">
                 <tr>
                   <td>
@@ -95,7 +104,7 @@
 
     <!-- ── Global Markets ───────────────────────────────────────── -->
     <tr>
-      <td style="background:#0d1425;padding:32px 40px;border-bottom:1px solid #1e2d4d;">
+      <td class="email-pad" style="background:#0d1425;padding:32px 40px;border-bottom:1px solid #1e2d4d;">
         <h2 style="margin:0 0 20px;font-size:16px;font-weight:700;color:#e8ecf5;">🌍 Global Markets</h2>
         <table width="100%" role="presentation" border="0" cellspacing="0" cellpadding="0">
           {% for idx in intl.indices %}
@@ -129,10 +138,33 @@
       </td>
     </tr>
 
+    <!-- ── International Takeaway ──────────────────────────────── -->
+    <tr>
+      <td class="email-pad" style="background:#080d1a;padding:28px 40px;border-bottom:1px solid #1e2d4d;">
+        <h2 style="margin:0 0 14px;font-size:16px;font-weight:700;color:#e8ecf5;">🌍 What It Means</h2>
+        <p style="margin:0;color:#94a3b8;font-size:14px;line-height:1.75;">{{ report.international_summary[:500] }}{% if report.international_summary|length > 500 %}…{% endif %}</p>
+      </td>
+    </tr>
+
+    {% if news %}
+    <!-- ── News Brief ──────────────────────────────────────────── -->
+    <tr>
+      <td class="email-pad" style="background:#0d1425;padding:28px 40px;border-bottom:1px solid #1e2d4d;">
+        <h2 style="margin:0 0 14px;font-size:16px;font-weight:700;color:#e8ecf5;">📰 News Brief</h2>
+        {% for item in news[:3] %}
+        <a href="{{ item.url }}" style="display:block;padding:12px 0;border-bottom:1px solid #1e2d4d;color:#e8ecf5;font-size:14px;font-weight:600;line-height:1.45;text-decoration:none;">
+          {{ item.title }}
+          <span style="display:block;margin-top:4px;color:#64748b;font-size:11px;font-weight:400;">{{ item.source }}{% if item.display_date %} · {{ item.display_date }}{% endif %}</span>
+        </a>
+        {% endfor %}
+      </td>
+    </tr>
+    {% endif %}
+
     <!-- ── Key Events ───────────────────────────────────────────── -->
     {% if report.key_events %}
     <tr>
-      <td style="background:#080d1a;padding:32px 40px;border-bottom:1px solid #1e2d4d;">
+      <td class="email-pad" style="background:#080d1a;padding:32px 40px;border-bottom:1px solid #1e2d4d;">
         <h2 style="margin:0 0 20px;font-size:16px;font-weight:700;color:#e8ecf5;">📌 Key Events</h2>
         {% for event in report.key_events %}
         <table width="100%" role="presentation" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:12px;background:#151e33;border:1px solid #1e2d4d;border-radius:8px;">
@@ -153,8 +185,8 @@
 
     <!-- ── CTA ──────────────────────────────────────────────────── -->
     <tr>
-      <td style="background:#0d1425;padding:32px 40px;text-align:center;border-bottom:1px solid #1e2d4d;">
-        <a href="https://yourusername.github.io/market-update/{{ report.date }}.html"
+      <td class="email-pad" style="background:#0d1425;padding:32px 40px;text-align:center;border-bottom:1px solid #1e2d4d;">
+        <a class="email-cta" href="https://prathameshpowar1910.github.io/market-update/"
            style="display:inline-block;padding:14px 32px;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;font-size:14px;font-weight:600;border-radius:12px;text-decoration:none;letter-spacing:0.01em;">
           Read Full Report →
         </a>
@@ -164,7 +196,7 @@
 
     <!-- ── Footer / Disclaimer ──────────────────────────────────── -->
     <tr>
-      <td style="background:#080d1a;padding:24px 40px;border-radius:0 0 16px 16px;text-align:center;">
+      <td class="email-pad" style="background:#080d1a;padding:24px 40px;border-radius:0 0 16px 16px;text-align:center;">
         <p style="margin:0 0 8px;font-size:11px;color:#475569;line-height:1.7;">{{ disclaimer }}</p>
         <p style="margin:0;font-size:11px;color:#334155;">Market Digest · Auto-generated by AI pipeline</p>
       </td>

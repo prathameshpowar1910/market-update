@@ -17,7 +17,7 @@
       Daily AI-powered analysis of Indian &amp; global markets.
       Delivered every weekday at midnight IST.
     </p>
-    <a href="/{{ date_str }}.html" class="btn btn-primary">
+    <a href="{{ date_str }}.html" class="btn btn-primary">
       Read Today's Report →
     </a>
   </div>
@@ -38,7 +38,7 @@
           {% elif report.overall_sentiment == 'bearish' %}🔴 Bearish
           {% else %}🟡 Neutral{% endif %}
         </span>
-        <a href="/{{ date_str }}.html" class="glance-readmore">Read full report →</a>
+        <a href="{{ date_str }}.html" class="glance-readmore">Read full report →</a>
       </div>
       <ul class="tldr-list" role="list">
         {% for bullet in report.tldr %}
@@ -60,7 +60,7 @@
     <ul class="archive-list" role="list">
       {% for d in archive_dates %}
       <li class="archive-item">
-        <a href="/{{ d }}.html" class="archive-link">
+        <a href="{{ d }}.html" class="archive-link">
           <span class="archive-date">{{ d }}</span>
           <span class="archive-arrow" aria-hidden="true">→</span>
         </a>

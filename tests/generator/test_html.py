@@ -133,4 +133,4 @@ class TestHTMLGenerator:
             report_date=sample_date,
         )
         html = path.read_text(encoding="utf-8")
-        assert 'href="/glossary.html#banking"' in html
+        assert 'href="glossary.html#banking"' in html

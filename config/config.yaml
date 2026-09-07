@@ -109,7 +109,7 @@ email:
 site:
   title: "Market Digest"
   description: "Your daily AI-powered Indian & global market summary"
-  base_url: "https://yourusername.github.io/market-update"
+  base_url: "https://prathameshpowar1910.github.io/market-update"
   archive_limit: 30          # number of past reports shown on index
 
 schedule:
