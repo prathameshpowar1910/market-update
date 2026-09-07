@@ -1,16 +1,2030 @@
 [
   {
-    "term": "Anchor Investors",
-    "slug": "anchor-investors",
-    "definition": "Institutional investors invited to subscribe to shares before a public offering to build confidence and establish an initial price trend.",
-    "category": "market-structure",
-    "added_date": "2026-09-07"
+    "term": "P/E Ratio",
+    "slug": "p-e-ratio",
+    "definition": "Price-to-Earnings Ratio — the ratio of a company's share price to its earnings per share. A higher P/E can indicate higher growth expectations; a lower P/E may indicate lower expectations or possible undervaluation.",
+    "category": "valuation"
   },
   {
-    "term": "Supply Shock",
-    "slug": "supply-shock",
-    "definition": "An unexpected event that suddenly changes the supply of a product or commodity, causing dramatic price shifts.",
-    "category": "macro",
-    "added_date": "2026-09-07"
+    "term": "Market Cap",
+    "slug": "market-cap",
+    "definition": "Market Capitalisation — the total market value of a company's outstanding shares, calculated as share price × total shares outstanding.",
+    "category": "basics"
+  },
+  {
+    "term": "Sensex",
+    "slug": "sensex",
+    "definition": "The S&P BSE SENSEX is a benchmark index of 30 major companies listed on the Bombay Stock Exchange (BSE).",
+    "category": "market-structure"
+  },
+  {
+    "term": "NIFTY 50",
+    "slug": "nifty-50",
+    "definition": "A major Indian stock market index representing 50 large companies listed on the National Stock Exchange (NSE).",
+    "category": "market-structure"
+  },
+  {
+    "term": "Dividend Yield",
+    "slug": "dividend-yield",
+    "definition": "A financial ratio showing how much a company pays in dividends each year relative to its stock price. Annual Dividends ÷ Stock Price × 100.",
+    "category": "valuation"
+  },
+  {
+    "term": "Bull Market",
+    "slug": "bull-market",
+    "definition": "A market condition characterised by rising prices and generally positive investor sentiment. A common technical definition is a 20% or greater rise from a recent low.",
+    "category": "basics"
+  },
+  {
+    "term": "Bear Market",
+    "slug": "bear-market",
+    "definition": "A market condition characterised by falling prices and widespread pessimism. A common technical definition is a 20% or greater decline from a recent high.",
+    "category": "basics"
+  },
+  {
+    "term": "FII",
+    "slug": "fii",
+    "definition": "Foreign Institutional Investor — an investor or institution from outside India that invests in Indian financial markets.",
+    "category": "market-structure"
+  },
+  {
+    "term": "DII",
+    "slug": "dii",
+    "definition": "Domestic Institutional Investor — Indian institutions such as mutual funds, insurance companies and banks that invest in Indian markets.",
+    "category": "market-structure"
+  },
+  {
+    "term": "Volatility",
+    "slug": "volatility",
+    "definition": "A measure of how much and how quickly the price of an investment moves. Higher volatility generally means larger price swings.",
+    "category": "basics"
+  },
+  {
+    "term": "52-Week High",
+    "slug": "52-week-high",
+    "definition": "The highest price at which a security has traded during the previous 52 weeks.",
+    "category": "technical-analysis"
+  },
+  {
+    "term": "Moving Average",
+    "slug": "moving-average",
+    "definition": "A technical indicator that calculates the average price over a specific period, such as 50 days or 200 days.",
+    "category": "technical-analysis"
+  },
+  {
+    "term": "EPS",
+    "slug": "eps",
+    "definition": "Earnings Per Share — the portion of a company's profit attributable to each outstanding share. EPS = Net Income ÷ Shares Outstanding.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "Repo Rate",
+    "slug": "repo-rate",
+    "definition": "The rate at which the Reserve Bank of India lends money to commercial banks. It is an important monetary-policy tool.",
+    "category": "macro"
+  },
+  {
+    "term": "Index Fund",
+    "slug": "index-fund",
+    "definition": "A mutual fund or ETF designed to track a particular market index instead of actively trying to outperform it.",
+    "category": "basics"
+  },
+  {
+    "term": "Stock",
+    "slug": "stock",
+    "definition": "A financial security representing ownership in a company. Owning stock can give an investor a claim on part of the company's assets and profits.",
+    "category": "stocks"
+  },
+  {
+    "term": "Share",
+    "slug": "share",
+    "definition": "A single unit of ownership in a company.",
+    "category": "stocks"
+  },
+  {
+    "term": "Equity",
+    "slug": "equity",
+    "definition": "Ownership value in a company. For an investor, equity usually means ownership through shares.",
+    "category": "stocks"
+  },
+  {
+    "term": "Common Stock",
+    "slug": "common-stock",
+    "definition": "A type of company ownership that usually provides voting rights and a claim on profits after other obligations are paid.",
+    "category": "stocks"
+  },
+  {
+    "term": "Preferred Stock",
+    "slug": "preferred-stock",
+    "definition": "A type of company ownership that generally receives dividends before common shareholders and may have preferential claims on company assets.",
+    "category": "stocks"
+  },
+  {
+    "term": "Large Cap",
+    "slug": "large-cap",
+    "definition": "A company with a relatively large market capitalisation compared with other companies in its market.",
+    "category": "stocks"
+  },
+  {
+    "term": "Mid Cap",
+    "slug": "mid-cap",
+    "definition": "A company with a medium-sized market capitalisation compared with other companies in its market.",
+    "category": "stocks"
+  },
+  {
+    "term": "Small Cap",
+    "slug": "small-cap",
+    "definition": "A company with a relatively small market capitalisation compared with larger companies.",
+    "category": "stocks"
+  },
+  {
+    "term": "Blue Chip",
+    "slug": "blue-chip",
+    "definition": "A well-established company that is generally considered financially strong and relatively mature.",
+    "category": "stocks"
+  },
+  {
+    "term": "Growth Stock",
+    "slug": "growth-stock",
+    "definition": "A stock of a company expected to grow its revenue or profits faster than the broader market.",
+    "category": "stocks"
+  },
+  {
+    "term": "Value Stock",
+    "slug": "value-stock",
+    "definition": "A stock that appears relatively inexpensive compared with measures such as earnings, assets or cash flow.",
+    "category": "stocks"
+  },
+  {
+    "term": "Defensive Stock",
+    "slug": "defensive-stock",
+    "definition": "A stock belonging to a business whose demand tends to remain relatively stable even during economic downturns.",
+    "category": "stocks"
+  },
+  {
+    "term": "Cyclical Stock",
+    "slug": "cyclical-stock",
+    "definition": "A stock whose business performance tends to move closely with economic conditions.",
+    "category": "stocks"
+  },
+  {
+    "term": "Penny Stock",
+    "slug": "penny-stock",
+    "definition": "A very low-priced stock, often associated with smaller companies and potentially higher volatility and liquidity risk.",
+    "category": "stocks"
+  },
+  {
+    "term": "Blue Chip Index",
+    "slug": "blue-chip-index",
+    "definition": "An index designed to track relatively large, established and financially significant companies.",
+    "category": "market-structure"
+  },
+  {
+    "term": "IPO",
+    "slug": "ipo",
+    "definition": "Initial Public Offering — when a private company offers its shares to the public for the first time and becomes publicly listed.",
+    "category": "primary-market"
+  },
+  {
+    "term": "FPO",
+    "slug": "fpo",
+    "definition": "Follow-on Public Offer — a public offering of shares by a company that is already listed.",
+    "category": "primary-market"
+  },
+  {
+    "term": "Primary Market",
+    "slug": "primary-market",
+    "definition": "The market where new securities are issued and sold to investors.",
+    "category": "market-structure"
+  },
+  {
+    "term": "Secondary Market",
+    "slug": "secondary-market",
+    "definition": "The market where investors buy and sell securities that have already been issued.",
+    "category": "market-structure"
+  },
+  {
+    "term": "Listing",
+    "slug": "listing",
+    "definition": "The process of a company's securities becoming available for trading on a stock exchange.",
+    "category": "market-structure"
+  },
+  {
+    "term": "Book Building",
+    "slug": "book-building",
+    "definition": "A process used in many public offerings where investor bids help determine the final issue price.",
+    "category": "primary-market"
+  },
+  {
+    "term": "Issue Price",
+    "slug": "issue-price",
+    "definition": "The price at which newly issued shares or securities are offered to investors.",
+    "category": "primary-market"
+  },
+  {
+    "term": "Listing Price",
+    "slug": "listing-price",
+    "definition": "The price at which a newly listed security begins trading on an exchange.",
+    "category": "primary-market"
+  },
+  {
+    "term": "Rights Issue",
+    "slug": "rights-issue",
+    "definition": "An offer by a company to existing shareholders to purchase additional shares under specified terms.",
+    "category": "corporate-actions"
+  },
+  {
+    "term": "Bonus Issue",
+    "slug": "bonus-issue",
+    "definition": "When a company gives existing shareholders additional shares without charging them separately, according to a specified ratio.",
+    "category": "corporate-actions"
+  },
+  {
+    "term": "Stock Split",
+    "slug": "stock-split",
+    "definition": "A corporate action that increases the number of shares while proportionally reducing the price per share, without changing the overall value of an investor's holding at the time of the split.",
+    "category": "corporate-actions"
+  },
+  {
+    "term": "Reverse Stock Split",
+    "slug": "reverse-stock-split",
+    "definition": "A corporate action that reduces the number of shares while proportionally increasing the price per share.",
+    "category": "corporate-actions"
+  },
+  {
+    "term": "Buyback",
+    "slug": "buyback",
+    "definition": "When a company purchases its own shares from shareholders.",
+    "category": "corporate-actions"
+  },
+  {
+    "term": "Dividend",
+    "slug": "dividend",
+    "definition": "A payment made by a company to its shareholders, usually from profits or accumulated reserves.",
+    "category": "corporate-actions"
+  },
+  {
+    "term": "Interim Dividend",
+    "slug": "interim-dividend",
+    "definition": "A dividend declared and paid before a company's final annual results are completed.",
+    "category": "corporate-actions"
+  },
+  {
+    "term": "Final Dividend",
+    "slug": "final-dividend",
+    "definition": "A dividend declared after the financial year and usually approved according to the company's applicable corporate process.",
+    "category": "corporate-actions"
+  },
+  {
+    "term": "Record Date",
+    "slug": "record-date",
+    "definition": "The date used to determine which shareholders are eligible to receive a corporate benefit such as a dividend or bonus.",
+    "category": "corporate-actions"
+  },
+  {
+    "term": "Ex-Dividend Date",
+    "slug": "ex-dividend-date",
+    "definition": "The date from which a stock trades without the entitlement to the upcoming dividend.",
+    "category": "corporate-actions"
+  },
+  {
+    "term": "ESOP",
+    "slug": "esop",
+    "definition": "Employee Stock Option Plan — a scheme that gives employees the right to acquire company shares under specified conditions.",
+    "category": "corporate-actions"
+  },
+  {
+    "term": "Revenue",
+    "slug": "revenue",
+    "definition": "The money a company earns from selling its goods or services before subtracting expenses.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "Sales",
+    "slug": "sales",
+    "definition": "The amount of money a company earns from selling products or services.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "Gross Profit",
+    "slug": "gross-profit",
+    "definition": "Revenue minus the direct costs of producing the goods or services sold.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "Gross Margin",
+    "slug": "gross-margin",
+    "definition": "Gross profit expressed as a percentage of revenue.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "Operating Profit",
+    "slug": "operating-profit",
+    "definition": "Profit generated from normal business operations after operating expenses are deducted.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "Operating Margin",
+    "slug": "operating-margin",
+    "definition": "Operating profit expressed as a percentage of revenue.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "EBIT",
+    "slug": "ebit",
+    "definition": "Earnings Before Interest and Taxes — profit before interest expenses and income taxes are deducted.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "EBITDA",
+    "slug": "ebitda",
+    "definition": "Earnings Before Interest, Taxes, Depreciation and Amortization — a measure often used to compare operating performance before certain expenses.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "EBITDA Margin",
+    "slug": "ebitda-margin",
+    "definition": "EBITDA expressed as a percentage of revenue.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "Net Profit",
+    "slug": "net-profit",
+    "definition": "The profit remaining after a company subtracts its expenses, interest, taxes and other applicable costs from revenue.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "Net Margin",
+    "slug": "net-margin",
+    "definition": "Net profit expressed as a percentage of revenue.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "PAT",
+    "slug": "pat",
+    "definition": "Profit After Tax — the profit remaining after income taxes have been accounted for.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "PBT",
+    "slug": "pbt",
+    "definition": "Profit Before Tax — profit calculated before income tax is deducted.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "Operating Expenses",
+    "slug": "operating-expenses",
+    "definition": "Regular costs required to run a business, such as salaries, rent, administration and marketing.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "CAPEX",
+    "slug": "capex",
+    "definition": "Capital Expenditure — money a company spends on long-term assets such as buildings, machinery, technology or equipment.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "OPEX",
+    "slug": "opex",
+    "definition": "Operating Expenditure — regular costs required to operate a business.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "Free Cash Flow",
+    "slug": "free-cash-flow",
+    "definition": "Cash generated by a company after accounting for the capital spending needed to maintain or grow the business.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "Operating Cash Flow",
+    "slug": "operating-cash-flow",
+    "definition": "Cash generated or used by a company's normal business operations.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "Cash Flow",
+    "slug": "cash-flow",
+    "definition": "The movement of money into and out of a company, investment or individual's finances.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "Working Capital",
+    "slug": "working-capital",
+    "definition": "Current assets minus current liabilities. It helps show a company's short-term financial position.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "ROE",
+    "slug": "roe",
+    "definition": "Return on Equity — a measure of how efficiently a company generates profit from shareholders' equity.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "ROA",
+    "slug": "roa",
+    "definition": "Return on Assets — a measure of how efficiently a company uses its assets to generate profit.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "ROIC",
+    "slug": "roic",
+    "definition": "Return on Invested Capital — a measure of how efficiently a company generates profit from the capital invested in its business.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "Debt-to-Equity Ratio",
+    "slug": "debt-to-equity-ratio",
+    "definition": "A ratio comparing a company's debt with shareholders' equity.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "Interest Coverage Ratio",
+    "slug": "interest-coverage-ratio",
+    "definition": "A measure of how easily a company can pay interest on its debt using its operating earnings.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "Current Ratio",
+    "slug": "current-ratio",
+    "definition": "Current assets divided by current liabilities. It is commonly used to assess short-term financial strength.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "Quick Ratio",
+    "slug": "quick-ratio",
+    "definition": "A liquidity ratio that compares assets that can be converted into cash relatively quickly with current liabilities.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "Asset Turnover",
+    "slug": "asset-turnover",
+    "definition": "A ratio showing how efficiently a company uses its assets to generate revenue.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "Inventory Turnover",
+    "slug": "inventory-turnover",
+    "definition": "A measure of how many times a company sells and replaces its inventory during a period.",
+    "category": "fundamentals"
+  },
+  {
+    "term": "Balance Sheet",
+    "slug": "balance-sheet",
+    "definition": "A financial statement showing a company's assets, liabilities and shareholders' equity at a specific point in time.",
+    "category": "accounting"
+  },
+  {
+    "term": "Income Statement",
+    "slug": "income-statement",
+    "definition": "A financial statement showing a company's revenue, expenses and profit or loss over a period.",
+    "category": "accounting"
+  },
+  {
+    "term": "Cash Flow Statement",
+    "slug": "cash-flow-statement",
+    "definition": "A financial statement showing how cash moved through a company during a period.",
+    "category": "accounting"
+  },
+  {
+    "term": "Assets",
+    "slug": "assets",
+    "definition": "Things a company or person owns that have economic value.",
+    "category": "accounting"
+  },
+  {
+    "term": "Liabilities",
+    "slug": "liabilities",
+    "definition": "Money or obligations that a company or person owes to others.",
+    "category": "accounting"
+  },
+  {
+    "term": "Shareholders' Equity",
+    "slug": "shareholders-equity",
+    "definition": "The residual value belonging to shareholders after subtracting liabilities from assets.",
+    "category": "accounting"
+  },
+  {
+    "term": "Current Assets",
+    "slug": "current-assets",
+    "definition": "Assets expected to be converted into cash or used within a relatively short period, generally within one year.",
+    "category": "accounting"
+  },
+  {
+    "term": "Current Liabilities",
+    "slug": "current-liabilities",
+    "definition": "Financial obligations generally due within one year.",
+    "category": "accounting"
+  },
+  {
+    "term": "Retained Earnings",
+    "slug": "retained-earnings",
+    "definition": "Profit a company keeps in the business instead of distributing it entirely to shareholders.",
+    "category": "accounting"
+  },
+  {
+    "term": "Depreciation",
+    "slug": "depreciation",
+    "definition": "The accounting process of spreading the cost of a physical asset over its useful life.",
+    "category": "accounting"
+  },
+  {
+    "term": "Amortization",
+    "slug": "amortization",
+    "definition": "The process of gradually spreading the cost of certain intangible assets or financial obligations over time.",
+    "category": "accounting"
+  },
+  {
+    "term": "Goodwill",
+    "slug": "goodwill",
+    "definition": "An accounting asset that can arise when a company acquires another company for more than the fair value of its identifiable net assets.",
+    "category": "accounting"
+  },
+  {
+    "term": "Intangible Asset",
+    "slug": "intangible-asset",
+    "definition": "A non-physical asset such as patents, trademarks, copyrights or certain intellectual property.",
+    "category": "accounting"
+  },
+  {
+    "term": "Tangible Asset",
+    "slug": "tangible-asset",
+    "definition": "A physical asset such as buildings, machinery, vehicles or equipment.",
+    "category": "accounting"
+  },
+  {
+    "term": "Accrual Accounting",
+    "slug": "accrual-accounting",
+    "definition": "An accounting method where income and expenses are recorded when they are earned or incurred rather than only when cash changes hands.",
+    "category": "accounting"
+  },
+  {
+    "term": "Accounts Receivable",
+    "slug": "accounts-receivable",
+    "definition": "Money customers owe a company for goods or services already provided.",
+    "category": "accounting"
+  },
+  {
+    "term": "Accounts Payable",
+    "slug": "accounts-payable",
+    "definition": "Money a company owes suppliers or other parties for goods or services already received.",
+    "category": "accounting"
+  },
+  {
+    "term": "Inventory",
+    "slug": "inventory",
+    "definition": "Goods and materials a company holds for sale or for use in producing products.",
+    "category": "accounting"
+  },
+  {
+    "term": "Impairment",
+    "slug": "impairment",
+    "definition": "A reduction in the recorded value of an asset when its value is believed to have fallen significantly.",
+    "category": "accounting"
+  },
+  {
+    "term": "GAAP",
+    "slug": "gaap",
+    "definition": "Generally Accepted Accounting Principles — accounting rules and standards used to prepare financial statements in certain jurisdictions.",
+    "category": "accounting"
+  },
+  {
+    "term": "IFRS",
+    "slug": "ifrs",
+    "definition": "International Financial Reporting Standards — accounting standards used in many countries for preparing financial statements.",
+    "category": "accounting"
+  },
+  {
+    "term": "P/B Ratio",
+    "slug": "p-b-ratio",
+    "definition": "Price-to-Book Ratio — a company's market price compared with its book value per share.",
+    "category": "valuation"
+  },
+  {
+    "term": "P/S Ratio",
+    "slug": "p-s-ratio",
+    "definition": "Price-to-Sales Ratio — a company's market value or share price compared with its sales.",
+    "category": "valuation"
+  },
+  {
+    "term": "PEG Ratio",
+    "slug": "peg-ratio",
+    "definition": "Price/Earnings-to-Growth Ratio — a valuation measure that compares a company's P/E ratio with its expected earnings growth rate.",
+    "category": "valuation"
+  },
+  {
+    "term": "Enterprise Value",
+    "slug": "enterprise-value",
+    "definition": "A measure of a company's overall business value that considers its market value, debt and cash.",
+    "category": "valuation"
+  },
+  {
+    "term": "EV/EBITDA",
+    "slug": "ev-ebitda",
+    "definition": "Enterprise Value-to-EBITDA Ratio — a valuation measure comparing a company's enterprise value with EBITDA.",
+    "category": "valuation"
+  },
+  {
+    "term": "EV/Sales",
+    "slug": "ev-sales",
+    "definition": "Enterprise Value-to-Sales Ratio — a valuation measure comparing enterprise value with revenue.",
+    "category": "valuation"
+  },
+  {
+    "term": "Price-to-Cash-Flow Ratio",
+    "slug": "price-to-cash-flow",
+    "definition": "A valuation ratio comparing a company's market value with the cash generated by its operations.",
+    "category": "valuation"
+  },
+  {
+    "term": "Free Cash Flow Yield",
+    "slug": "free-cash-flow-yield",
+    "definition": "Free cash flow compared with a company's market value, showing cash generation relative to the company's price.",
+    "category": "valuation"
+  },
+  {
+    "term": "Intrinsic Value",
+    "slug": "intrinsic-value",
+    "definition": "An estimate of what an investment may be worth based on its underlying financial characteristics rather than its current market price.",
+    "category": "valuation"
+  },
+  {
+    "term": "Fair Value",
+    "slug": "fair-value",
+    "definition": "An estimated reasonable value for an asset based on relevant information and valuation methods.",
+    "category": "valuation"
+  },
+  {
+    "term": "Margin of Safety",
+    "slug": "margin-of-safety",
+    "definition": "The difference between an investment's estimated intrinsic value and its market price, providing some protection against valuation mistakes.",
+    "category": "valuation"
+  },
+  {
+    "term": "DCF",
+    "slug": "dcf",
+    "definition": "Discounted Cash Flow — a valuation method that estimates an investment's value by calculating the present value of expected future cash flows.",
+    "category": "valuation"
+  },
+  {
+    "term": "Sum-of-the-Parts Valuation",
+    "slug": "sum-of-the-parts-valuation",
+    "definition": "A valuation method where different parts of a company are valued separately and then added together.",
+    "category": "valuation"
+  },
+  {
+    "term": "RSI",
+    "slug": "rsi",
+    "definition": "Relative Strength Index — a technical indicator that measures the strength and speed of recent price movements, usually on a scale from 0 to 100.",
+    "category": "technical-analysis"
+  },
+  {
+    "term": "MACD",
+    "slug": "macd",
+    "definition": "Moving Average Convergence Divergence — a technical indicator that compares moving averages to help identify changes in momentum and trends.",
+    "category": "technical-analysis"
+  },
+  {
+    "term": "Bollinger Bands",
+    "slug": "bollinger-bands",
+    "definition": "A technical indicator consisting of a moving average and bands around it that help show price volatility.",
+    "category": "technical-analysis"
+  },
+  {
+    "term": "VWAP",
+    "slug": "vwap",
+    "definition": "Volume Weighted Average Price — the average traded price of a security during a period, weighted by trading volume.",
+    "category": "technical-analysis"
+  },
+  {
+    "term": "Support",
+    "slug": "support",
+    "definition": "A price area where buying interest may be strong enough to slow or stop a decline.",
+    "category": "technical-analysis"
+  },
+  {
+    "term": "Resistance",
+    "slug": "resistance",
+    "definition": "A price area where selling interest may be strong enough to slow or stop a rise.",
+    "category": "technical-analysis"
+  },
+  {
+    "term": "Breakout",
+    "slug": "breakout",
+    "definition": "A price movement through an important support or resistance level that traders may interpret as a potential change in trend.",
+    "category": "technical-analysis"
+  },
+  {
+    "term": "Trend",
+    "slug": "trend",
+    "definition": "The general direction in which the price of a security or market is moving.",
+    "category": "technical-analysis"
+  },
+  {
+    "term": "Uptrend",
+    "slug": "uptrend",
+    "definition": "A market movement characterised by generally rising prices and higher highs and higher lows.",
+    "category": "technical-analysis"
+  },
+  {
+    "term": "Downtrend",
+    "slug": "downtrend",
+    "definition": "A market movement characterised by generally falling prices and lower highs and lower lows.",
+    "category": "technical-analysis"
+  },
+  {
+    "term": "Trading Volume",
+    "slug": "trading-volume",
+    "definition": "The number of shares or contracts traded during a specific period.",
+    "category": "technical-analysis"
+  },
+  {
+    "term": "Market Breadth",
+    "slug": "market-breadth",
+    "definition": "A measure of how broadly stocks are participating in a market movement, such as how many stocks are rising versus falling.",
+    "category": "technical-analysis"
+  },
+  {
+    "term": "Momentum",
+    "slug": "momentum",
+    "definition": "The strength or speed of an asset's recent price movement.",
+    "category": "technical-analysis"
+  },
+  {
+    "term": "Market Order",
+    "slug": "market-order",
+    "definition": "An order to buy or sell a security immediately at the best available market price.",
+    "category": "trading"
+  },
+  {
+    "term": "Limit Order",
+    "slug": "limit-order",
+    "definition": "An order to buy or sell a security only at a specified price or better.",
+    "category": "trading"
+  },
+  {
+    "term": "Stop-Loss Order",
+    "slug": "stop-loss-order",
+    "definition": "An order designed to limit a potential loss by triggering an order when a specified price is reached.",
+    "category": "trading"
+  },
+  {
+    "term": "Trailing Stop-Loss",
+    "slug": "trailing-stop-loss",
+    "definition": "A stop-loss that automatically moves with the price when the investment moves in a favourable direction.",
+    "category": "trading"
+  },
+  {
+    "term": "Bid Price",
+    "slug": "bid-price",
+    "definition": "The highest price a buyer is currently willing to pay for a security.",
+    "category": "trading"
+  },
+  {
+    "term": "Ask Price",
+    "slug": "ask-price",
+    "definition": "The lowest price at which a seller is currently willing to sell a security.",
+    "category": "trading"
+  },
+  {
+    "term": "Bid-Ask Spread",
+    "slug": "bid-ask-spread",
+    "definition": "The difference between the highest available buying price and the lowest available selling price.",
+    "category": "trading"
+  },
+  {
+    "term": "Order Book",
+    "slug": "order-book",
+    "definition": "A list of current buy and sell orders waiting to be matched in a market.",
+    "category": "trading"
+  },
+  {
+    "term": "Market Depth",
+    "slug": "market-depth",
+    "definition": "A view of the buy and sell orders available at different prices for a security.",
+    "category": "trading"
+  },
+  {
+    "term": "Intraday Trading",
+    "slug": "intraday-trading",
+    "definition": "Buying and selling a security within the same trading day rather than holding it overnight.",
+    "category": "trading"
+  },
+  {
+    "term": "Swing Trading",
+    "slug": "swing-trading",
+    "definition": "A trading approach that attempts to profit from price movements over several days or weeks.",
+    "category": "trading"
+  },
+  {
+    "term": "Position Trading",
+    "slug": "position-trading",
+    "definition": "A trading approach where investments are held for weeks, months or longer based on expected larger price movements.",
+    "category": "trading"
+  },
+  {
+    "term": "Short Selling",
+    "slug": "short-selling",
+    "definition": "A trading strategy that seeks to profit when the price of a security falls, subject to applicable market rules.",
+    "category": "trading"
+  },
+  {
+    "term": "Long Position",
+    "slug": "long-position",
+    "definition": "A position where an investor owns an asset or has exposure expecting its value to rise.",
+    "category": "trading"
+  },
+  {
+    "term": "Short Position",
+    "slug": "short-position",
+    "definition": "A position designed to benefit from a decline in the value of an asset.",
+    "category": "trading"
+  },
+  {
+    "term": "Leverage",
+    "slug": "leverage",
+    "definition": "Using borrowed money or financial instruments to increase the size of an investment relative to the investor's own capital.",
+    "category": "trading"
+  },
+  {
+    "term": "Margin",
+    "slug": "margin",
+    "definition": "Money or collateral required to support certain leveraged trades or positions.",
+    "category": "trading"
+  },
+  {
+    "term": "Delivery Volume",
+    "slug": "delivery-volume",
+    "definition": "The number of shares that are actually taken into or delivered from investor holdings rather than simply traded and closed within the market.",
+    "category": "trading"
+  },
+  {
+    "term": "Derivative",
+    "slug": "derivative",
+    "definition": "A financial instrument whose value is derived from an underlying asset, security, index, interest rate or other reference.",
+    "category": "derivatives"
+  },
+  {
+    "term": "Futures",
+    "slug": "futures",
+    "definition": "Standardised contracts to buy or sell an underlying asset at a specified price on a future date.",
+    "category": "derivatives"
+  },
+  {
+    "term": "Options",
+    "slug": "options",
+    "definition": "Contracts giving the buyer the right, but generally not the obligation, to buy or sell an underlying asset at a specified price before or at expiry.",
+    "category": "derivatives"
+  },
+  {
+    "term": "Call Option",
+    "slug": "call-option",
+    "definition": "An option giving the buyer the right to buy the underlying asset at the strike price under the contract terms.",
+    "category": "derivatives"
+  },
+  {
+    "term": "Put Option",
+    "slug": "put-option",
+    "definition": "An option giving the buyer the right to sell the underlying asset at the strike price under the contract terms.",
+    "category": "derivatives"
+  },
+  {
+    "term": "Strike Price",
+    "slug": "strike-price",
+    "definition": "The price at which an option allows the holder to buy or sell the underlying asset.",
+    "category": "derivatives"
+  },
+  {
+    "term": "Expiry Date",
+    "slug": "expiry-date",
+    "definition": "The date on which a derivative contract expires.",
+    "category": "derivatives"
+  },
+  {
+    "term": "Option Premium",
+    "slug": "option-premium",
+    "definition": "The price paid by an option buyer to purchase an option contract.",
+    "category": "derivatives"
+  },
+  {
+    "term": "Open Interest",
+    "slug": "open-interest",
+    "definition": "The total number of outstanding derivative contracts that have not yet been closed or settled.",
+    "category": "derivatives"
+  },
+  {
+    "term": "Implied Volatility",
+    "slug": "implied-volatility",
+    "definition": "The level of future price movement implied by the market price of an option.",
+    "category": "derivatives"
+  },
+  {
+    "term": "Historical Volatility",
+    "slug": "historical-volatility",
+    "definition": "A measure of how much an asset's price has actually moved in the past.",
+    "category": "derivatives"
+  },
+  {
+    "term": "In-the-Money",
+    "slug": "in-the-money",
+    "definition": "An option is in-the-money when exercising it would currently have positive intrinsic value.",
+    "category": "derivatives"
+  },
+  {
+    "term": "At-the-Money",
+    "slug": "at-the-money",
+    "definition": "An option is at-the-money when its strike price is approximately equal to the current price of the underlying asset.",
+    "category": "derivatives"
+  },
+  {
+    "term": "Out-of-the-Money",
+    "slug": "out-of-the-money",
+    "definition": "An option is out-of-the-money when exercising it would currently have no positive intrinsic value.",
+    "category": "derivatives"
+  },
+  {
+    "term": "Intrinsic Value",
+    "slug": "intrinsic-value",
+    "definition": "The value an option would have if it were exercised immediately.",
+    "category": "derivatives"
+  },
+  {
+    "term": "Extrinsic Value",
+    "slug": "extrinsic-value",
+    "definition": "The part of an option's price above its intrinsic value, reflecting factors such as time remaining and expected volatility.",
+    "category": "derivatives"
+  },
+  {
+    "term": "Time Decay",
+    "slug": "time-decay",
+    "definition": "The tendency of an option to lose time-related value as its expiry date approaches.",
+    "category": "derivatives"
+  },
+  {
+    "term": "Delta",
+    "slug": "delta",
+    "definition": "An option Greek that estimates how much an option's price may change when the underlying asset moves by one unit.",
+    "category": "options-greeks"
+  },
+  {
+    "term": "Gamma",
+    "slug": "gamma",
+    "definition": "An option Greek that measures how quickly an option's delta changes when the underlying price changes.",
+    "category": "options-greeks"
+  },
+  {
+    "term": "Theta",
+    "slug": "theta",
+    "definition": "An option Greek that measures how much an option's value may decrease as time passes, all else being equal.",
+    "category": "options-greeks"
+  },
+  {
+    "term": "Vega",
+    "slug": "vega",
+    "definition": "An option Greek that measures how sensitive an option's price is to changes in implied volatility.",
+    "category": "options-greeks"
+  },
+  {
+    "term": "Rho",
+    "slug": "rho",
+    "definition": "An option Greek that measures how sensitive an option's price is to changes in interest rates.",
+    "category": "options-greeks"
+  },
+  {
+    "term": "Futures Rollover",
+    "slug": "futures-rollover",
+    "definition": "Moving a futures position from an expiring contract into a later-expiry contract.",
+    "category": "derivatives"
+  },
+  {
+    "term": "Basis",
+    "slug": "basis",
+    "definition": "The difference between the spot price of an asset and the price of its related futures contract.",
+    "category": "derivatives"
+  },
+  {
+    "term": "Backwardation",
+    "slug": "backwardation",
+    "definition": "A market condition where futures prices are below the current spot price or expected future spot price.",
+    "category": "derivatives"
+  },
+  {
+    "term": "Contango",
+    "slug": "contango",
+    "definition": "A market condition where futures prices are higher than the current spot price.",
+    "category": "derivatives"
+  },
+  {
+    "term": "Bond",
+    "slug": "bond",
+    "definition": "A debt investment where an investor lends money to a government, company or other issuer in exchange for interest and repayment according to the bond's terms.",
+    "category": "bonds"
+  },
+  {
+    "term": "Bondholder",
+    "slug": "bondholder",
+    "definition": "A person or institution that owns a bond and has a claim according to the bond's terms.",
+    "category": "bonds"
+  },
+  {
+    "term": "Issuer",
+    "slug": "issuer",
+    "definition": "The government, company or other entity that issues a financial security.",
+    "category": "bonds"
+  },
+  {
+    "term": "Face Value",
+    "slug": "face-value",
+    "definition": "The stated value of a bond or other financial instrument, often representing the amount repaid at maturity.",
+    "category": "bonds"
+  },
+  {
+    "term": "Par Value",
+    "slug": "par-value",
+    "definition": "The nominal value assigned to a bond or security.",
+    "category": "bonds"
+  },
+  {
+    "term": "Coupon",
+    "slug": "coupon",
+    "definition": "The interest payment a bond pays according to its stated terms.",
+    "category": "bonds"
+  },
+  {
+    "term": "Coupon Rate",
+    "slug": "coupon-rate",
+    "definition": "The stated annual interest rate paid on a bond's face value.",
+    "category": "bonds"
+  },
+  {
+    "term": "Yield",
+    "slug": "yield",
+    "definition": "The income or return an investment generates relative to its price or value.",
+    "category": "bonds"
+  },
+  {
+    "term": "Yield to Maturity",
+    "slug": "yield-to-maturity",
+    "definition": "The approximate annual return an investor would earn if a bond were held until maturity and payments were made as promised.",
+    "category": "bonds"
+  },
+  {
+    "term": "Yield to Call",
+    "slug": "yield-to-call",
+    "definition": "The approximate return an investor would receive if a callable bond is repaid by the issuer on its call date.",
+    "category": "bonds"
+  },
+  {
+    "term": "Maturity Date",
+    "slug": "maturity-date",
+    "definition": "The date on which a bond or debt instrument reaches the end of its term and the principal is generally due.",
+    "category": "bonds"
+  },
+  {
+    "term": "Duration",
+    "slug": "duration",
+    "definition": "A measure of how sensitive a bond's price is to changes in interest rates and how long it takes to receive its cash flows.",
+    "category": "bonds"
+  },
+  {
+    "term": "Modified Duration",
+    "slug": "modified-duration",
+    "definition": "A measure used to estimate how much a bond's price may change when interest rates change.",
+    "category": "bonds"
+  },
+  {
+    "term": "Convexity",
+    "slug": "convexity",
+    "definition": "A measure of how the relationship between a bond's price and interest rates changes as rates move.",
+    "category": "bonds"
+  },
+  {
+    "term": "Credit Rating",
+    "slug": "credit-rating",
+    "definition": "An assessment of an issuer's ability to meet its debt obligations.",
+    "category": "bonds"
+  },
+  {
+    "term": "Credit Spread",
+    "slug": "credit-spread",
+    "definition": "The difference in yield between a bond with credit risk and a comparable lower-risk bond.",
+    "category": "bonds"
+  },
+  {
+    "term": "Default",
+    "slug": "default",
+    "definition": "Failure by a borrower or issuer to make required payments or meet specified obligations.",
+    "category": "bonds"
+  },
+  {
+    "term": "Sovereign Bond",
+    "slug": "sovereign-bond",
+    "definition": "A bond issued by a national government.",
+    "category": "bonds"
+  },
+  {
+    "term": "Corporate Bond",
+    "slug": "corporate-bond",
+    "definition": "A bond issued by a company to borrow money from investors.",
+    "category": "bonds"
+  },
+  {
+    "term": "Government Bond",
+    "slug": "government-bond",
+    "definition": "A debt security issued by a government to borrow money.",
+    "category": "bonds"
+  },
+  {
+    "term": "Municipal Bond",
+    "slug": "municipal-bond",
+    "definition": "A bond issued by a local or municipal government or related authority.",
+    "category": "bonds"
+  },
+  {
+    "term": "Debenture",
+    "slug": "debenture",
+    "definition": "A debt instrument issued by a company. Depending on its structure, it may be secured or unsecured.",
+    "category": "bonds"
+  },
+  {
+    "term": "Callable Bond",
+    "slug": "callable-bond",
+    "definition": "A bond that allows the issuer to repay the bond before its scheduled maturity under specified conditions.",
+    "category": "bonds"
+  },
+  {
+    "term": "Zero-Coupon Bond",
+    "slug": "zero-coupon-bond",
+    "definition": "A bond that does not make regular interest payments and is typically issued at a discount to its face value.",
+    "category": "bonds"
+  },
+  {
+    "term": "Fixed-Rate Bond",
+    "slug": "fixed-rate-bond",
+    "definition": "A bond whose stated interest rate remains fixed according to its terms.",
+    "category": "bonds"
+  },
+  {
+    "term": "Floating-Rate Bond",
+    "slug": "floating-rate-bond",
+    "definition": "A bond whose interest rate changes periodically according to a specified benchmark or formula.",
+    "category": "bonds"
+  },
+  {
+    "term": "Investment-Grade Bond",
+    "slug": "investment-grade-bond",
+    "definition": "A bond receiving a relatively strong credit rating and generally considered to have lower default risk than lower-rated bonds.",
+    "category": "bonds"
+  },
+  {
+    "term": "Junk Bond",
+    "slug": "junk-bond",
+    "definition": "A bond with a relatively low credit rating and generally higher default risk, often offering higher potential yields.",
+    "category": "bonds"
+  },
+  {
+    "term": "Commercial Paper",
+    "slug": "commercial-paper",
+    "definition": "A short-term debt instrument issued by companies to raise money for short-term funding needs.",
+    "category": "money-market"
+  },
+  {
+    "term": "Certificate of Deposit",
+    "slug": "certificate-of-deposit",
+    "definition": "A short-term money-market instrument issued by eligible financial institutions.",
+    "category": "money-market"
+  },
+  {
+    "term": "Money Market",
+    "slug": "money-market",
+    "definition": "The part of the financial system where short-term borrowing and lending takes place.",
+    "category": "money-market"
+  },
+  {
+    "term": "Mutual Fund",
+    "slug": "mutual-fund",
+    "definition": "An investment vehicle that pools money from many investors and invests it in a portfolio of securities.",
+    "category": "mutual-funds"
+  },
+  {
+    "term": "ETF",
+    "slug": "etf",
+    "definition": "Exchange-Traded Fund — a fund that trades on a stock exchange and typically holds a basket of investments.",
+    "category": "mutual-funds"
+  },
+  {
+    "term": "AUM",
+    "slug": "aum",
+    "definition": "Assets Under Management — the total value of investments managed by a fund or investment manager.",
+    "category": "mutual-funds"
+  },
+  {
+    "term": "NAV",
+    "slug": "nav",
+    "definition": "Net Asset Value — the value of a fund's assets minus its liabilities, usually expressed per unit for mutual funds.",
+    "category": "mutual-funds"
+  },
+  {
+    "term": "Expense Ratio",
+    "slug": "expense-ratio",
+    "definition": "The percentage of a fund's assets used each year to cover management and operating expenses.",
+    "category": "mutual-funds"
+  },
+  {
+    "term": "TER",
+    "slug": "ter",
+    "definition": "Total Expense Ratio — the percentage of a fund's assets used to cover its operating expenses.",
+    "category": "mutual-funds"
+  },
+  {
+    "term": "Tracking Error",
+    "slug": "tracking-error",
+    "definition": "The difference between the performance of an index fund or ETF and the index it is designed to track.",
+    "category": "mutual-funds"
+  },
+  {
+    "term": "Exit Load",
+    "slug": "exit-load",
+    "definition": "A fee that may be charged when an investor withdraws money from certain mutual fund schemes within a specified period.",
+    "category": "mutual-funds"
+  },
+  {
+    "term": "Direct Plan",
+    "slug": "direct-plan",
+    "definition": "A mutual fund plan purchased directly from the fund house without a distributor.",
+    "category": "mutual-funds"
+  },
+  {
+    "term": "Regular Plan",
+    "slug": "regular-plan",
+    "definition": "A mutual fund plan purchased through a distributor or intermediary.",
+    "category": "mutual-funds"
+  },
+  {
+    "term": "Active Fund",
+    "slug": "active-fund",
+    "definition": "A fund where a manager actively selects investments according to a strategy.",
+    "category": "mutual-funds"
+  },
+  {
+    "term": "Passive Fund",
+    "slug": "passive-fund",
+    "definition": "A fund designed mainly to follow an index or predefined investment strategy.",
+    "category": "mutual-funds"
+  },
+  {
+    "term": "SIP",
+    "slug": "sip",
+    "definition": "Systematic Investment Plan — a method of investing a fixed amount into a mutual fund at regular intervals.",
+    "category": "mutual-funds"
+  },
+  {
+    "term": "SWP",
+    "slug": "swp",
+    "definition": "Systematic Withdrawal Plan — a facility allowing an investor to withdraw a specified amount from a mutual fund at regular intervals.",
+    "category": "mutual-funds"
+  },
+  {
+    "term": "STP",
+    "slug": "stp",
+    "definition": "Systematic Transfer Plan — a facility allowing money to be transferred between mutual fund schemes at regular intervals, subject to scheme rules.",
+    "category": "mutual-funds"
+  },
+  {
+    "term": "Fund Manager",
+    "slug": "fund-manager",
+    "definition": "A professional responsible for making investment decisions for a fund.",
+    "category": "mutual-funds"
+  },
+  {
+    "term": "Riskometer",
+    "slug": "riskometer",
+    "definition": "A standardized tool used in India to show the level of risk associated with a mutual fund scheme.",
+    "category": "mutual-funds"
+  },
+  {
+    "term": "Index Fund",
+    "slug": "index-fund",
+    "definition": "A fund designed to track the performance of a particular market index.",
+    "category": "mutual-funds"
+  },
+  {
+    "term": "Asset Allocation",
+    "slug": "asset-allocation",
+    "definition": "How an investor divides money among asset classes such as stocks, bonds, cash, gold and real estate.",
+    "category": "portfolio"
+  },
+  {
+    "term": "Diversification",
+    "slug": "diversification",
+    "definition": "Spreading investments across different assets, companies or sectors to reduce concentration risk.",
+    "category": "portfolio"
+  },
+  {
+    "term": "Rebalancing",
+    "slug": "rebalancing",
+    "definition": "Adjusting a portfolio back toward its intended asset allocation after market movements change the original percentages.",
+    "category": "portfolio"
+  },
+  {
+    "term": "Portfolio",
+    "slug": "portfolio",
+    "definition": "The collection of investments owned by an individual or institution.",
+    "category": "portfolio"
+  },
+  {
+    "term": "Investment Horizon",
+    "slug": "investment-horizon",
+    "definition": "The length of time an investor expects to keep money invested before needing it.",
+    "category": "portfolio"
+  },
+  {
+    "term": "Risk Tolerance",
+    "slug": "risk-tolerance",
+    "definition": "How much investment loss or uncertainty an investor is financially and emotionally willing to accept.",
+    "category": "portfolio"
+  },
+  {
+    "term": "Risk Capacity",
+    "slug": "risk-capacity",
+    "definition": "An investor's financial ability to withstand losses without seriously affecting their financial goals.",
+    "category": "portfolio"
+  },
+  {
+    "term": "Compounding",
+    "slug": "compounding",
+    "definition": "The process of earning returns on both the original investment and previously earned returns.",
+    "category": "portfolio"
+  },
+  {
+    "term": "CAGR",
+    "slug": "cagr",
+    "definition": "Compound Annual Growth Rate — the average annual rate at which an investment grows over a period, assuming compounding.",
+    "category": "portfolio"
+  },
+  {
+    "term": "Absolute Return",
+    "slug": "absolute-return",
+    "definition": "The total percentage gain or loss on an investment without adjusting it to an annual rate.",
+    "category": "portfolio"
+  },
+  {
+    "term": "Annualized Return",
+    "slug": "annualized-return",
+    "definition": "A return expressed as an equivalent yearly rate.",
+    "category": "portfolio"
+  },
+  {
+    "term": "XIRR",
+    "slug": "xirr",
+    "definition": "Extended Internal Rate of Return — a method of calculating an annualized return when investments or withdrawals happen on different dates.",
+    "category": "portfolio"
+  },
+  {
+    "term": "Sharpe Ratio",
+    "slug": "sharpe-ratio",
+    "definition": "A risk-adjusted performance measure comparing excess return with the amount of risk taken.",
+    "category": "risk"
+  },
+  {
+    "term": "Sortino Ratio",
+    "slug": "sortino-ratio",
+    "definition": "A risk-adjusted return measure that focuses on harmful downside volatility.",
+    "category": "risk"
+  },
+  {
+    "term": "Maximum Drawdown",
+    "slug": "maximum-drawdown",
+    "definition": "The largest percentage decline from a portfolio's highest value to a later lowest value during a period.",
+    "category": "risk"
+  },
+  {
+    "term": "Systematic Risk",
+    "slug": "systematic-risk",
+    "definition": "Risk caused by broad market or economic factors that affects many investments.",
+    "category": "risk"
+  },
+  {
+    "term": "Unsystematic Risk",
+    "slug": "unsystematic-risk",
+    "definition": "Risk specific to a particular company or industry that can often be reduced through diversification.",
+    "category": "risk"
+  },
+  {
+    "term": "Interest Rate Risk",
+    "slug": "interest-rate-risk",
+    "definition": "The risk that changes in interest rates will negatively affect an investment, especially bonds.",
+    "category": "risk"
+  },
+  {
+    "term": "Currency Risk",
+    "slug": "currency-risk",
+    "definition": "The risk that changes in exchange rates will affect the value or return of an investment.",
+    "category": "risk"
+  },
+  {
+    "term": "Liquidity Risk",
+    "slug": "liquidity-risk",
+    "definition": "The risk that an investment cannot be bought or sold quickly at a reasonable price.",
+    "category": "risk"
+  },
+  {
+    "term": "Concentration Risk",
+    "slug": "concentration-risk",
+    "definition": "The risk of losing a large amount because too much of a portfolio is invested in one asset, company, sector or region.",
+    "category": "risk"
+  },
+  {
+    "term": "Credit Risk",
+    "slug": "credit-risk",
+    "definition": "The risk that a borrower or issuer will fail to meet its financial obligations.",
+    "category": "risk"
+  },
+  {
+    "term": "Inflation",
+    "slug": "inflation",
+    "definition": "A sustained increase in the general level of prices, reducing the purchasing power of money.",
+    "category": "macro"
+  },
+  {
+    "term": "CPI",
+    "slug": "cpi",
+    "definition": "Consumer Price Index — an index measuring changes in the prices consumers pay for a basket of goods and services.",
+    "category": "macro"
+  },
+  {
+    "term": "WPI",
+    "slug": "wpi",
+    "definition": "Wholesale Price Index — an index measuring changes in prices at the wholesale level.",
+    "category": "macro"
+  },
+  {
+    "term": "GDP",
+    "slug": "gdp",
+    "definition": "Gross Domestic Product — the total value of goods and services produced within an economy during a specific period.",
+    "category": "macro"
+  },
+  {
+    "term": "Real GDP",
+    "slug": "real-gdp",
+    "definition": "GDP adjusted for inflation so that changes in actual economic output can be measured more clearly.",
+    "category": "macro"
+  },
+  {
+    "term": "Nominal GDP",
+    "slug": "nominal-gdp",
+    "definition": "GDP measured using current prices without adjusting for inflation.",
+    "category": "macro"
+  },
+  {
+    "term": "GDP Growth",
+    "slug": "gdp-growth",
+    "definition": "The percentage change in a country's GDP over a period.",
+    "category": "macro"
+  },
+  {
+    "term": "Per Capita GDP",
+    "slug": "per-capita-gdp",
+    "definition": "GDP divided by the population, giving an approximate measure of economic output per person.",
+    "category": "macro"
+  },
+  {
+    "term": "Recession",
+    "slug": "recession",
+    "definition": "A significant slowdown in economic activity that affects areas such as production, employment and spending.",
+    "category": "macro"
+  },
+  {
+    "term": "Economic Cycle",
+    "slug": "economic-cycle",
+    "definition": "The recurring pattern of expansion, peak, slowdown and recovery in an economy.",
+    "category": "macro"
+  },
+  {
+    "term": "Economic Expansion",
+    "slug": "economic-expansion",
+    "definition": "A period when economic activity, production, income and employment are generally increasing.",
+    "category": "macro"
+  },
+  {
+    "term": "Unemployment Rate",
+    "slug": "unemployment-rate",
+    "definition": "The percentage of people in the labour force who are unemployed and actively looking for work.",
+    "category": "macro"
+  },
+  {
+    "term": "PMI",
+    "slug": "pmi",
+    "definition": "Purchasing Managers' Index — a survey-based indicator that provides an early signal about business activity and whether it is expanding or contracting.",
+    "category": "macro"
+  },
+  {
+    "term": "Consumer Confidence",
+    "slug": "consumer-confidence",
+    "definition": "A measure of how optimistic consumers feel about their income, employment and the economy.",
+    "category": "macro"
+  },
+  {
+    "term": "Fiscal Policy",
+    "slug": "fiscal-policy",
+    "definition": "Government decisions about taxation, spending and borrowing that influence the economy.",
+    "category": "macro"
+  },
+  {
+    "term": "Monetary Policy",
+    "slug": "monetary-policy",
+    "definition": "Central-bank actions involving interest rates and money supply intended to influence inflation, growth and economic activity.",
+    "category": "macro"
+  },
+  {
+    "term": "Repo Rate",
+    "slug": "repo-rate",
+    "definition": "The rate at which the RBI lends money to commercial banks against eligible securities.",
+    "category": "macro"
+  },
+  {
+    "term": "Reverse Repo Rate",
+    "slug": "reverse-repo-rate",
+    "definition": "A rate associated with banks placing funds with the central bank under applicable monetary-policy operations.",
+    "category": "macro"
+  },
+  {
+    "term": "CRR",
+    "slug": "crr",
+    "definition": "Cash Reserve Ratio — the percentage of certain bank deposits that banks are required to maintain as cash reserves with the RBI.",
+    "category": "macro"
+  },
+  {
+    "term": "SLR",
+    "slug": "slr",
+    "definition": "Statutory Liquidity Ratio — the percentage of certain liabilities that banks must maintain in specified liquid assets under applicable rules.",
+    "category": "macro"
+  },
+  {
+    "term": "Liquidity Injection",
+    "slug": "liquidity-injection",
+    "definition": "Actions that increase the availability of money or funds in the financial system.",
+    "category": "macro"
+  },
+  {
+    "term": "Liquidity Tightening",
+    "slug": "liquidity-tightening",
+    "definition": "Actions that reduce the amount of readily available money or liquidity in the financial system.",
+    "category": "macro"
+  },
+  {
+    "term": "Quantitative Easing",
+    "slug": "quantitative-easing",
+    "definition": "A central-bank policy involving large-scale purchases of financial assets intended to influence financial conditions and liquidity.",
+    "category": "macro"
+  },
+  {
+    "term": "Quantitative Tightening",
+    "slug": "quantitative-tightening",
+    "definition": "A central-bank policy of reducing its balance sheet or allowing previously purchased assets to mature, which can reduce liquidity.",
+    "category": "macro"
+  },
+  {
+    "term": "Stagflation",
+    "slug": "stagflation",
+    "definition": "A situation where economic growth is weak while inflation remains high.",
+    "category": "macro"
+  },
+  {
+    "term": "Deflation",
+    "slug": "deflation",
+    "definition": "A sustained decline in the general level of prices across an economy.",
+    "category": "macro"
+  },
+  {
+    "term": "Disinflation",
+    "slug": "disinflation",
+    "definition": "A slowdown in the rate at which prices are rising. Prices may still increase, but more slowly.",
+    "category": "macro"
+  },
+  {
+    "term": "Real Interest Rate",
+    "slug": "real-interest-rate",
+    "definition": "An interest rate adjusted for inflation.",
+    "category": "macro"
+  },
+  {
+    "term": "Basis Point",
+    "slug": "basis-point",
+    "definition": "A unit equal to 0.01 percentage point. For example, 100 basis points equals 1 percentage point.",
+    "category": "macro"
+  },
+  {
+    "term": "Yield Curve",
+    "slug": "yield-curve",
+    "definition": "A graph showing interest rates or yields for bonds with different maturities.",
+    "category": "macro"
+  },
+  {
+    "term": "Inverted Yield Curve",
+    "slug": "inverted-yield-curve",
+    "definition": "A yield curve where shorter-term interest rates are higher than longer-term rates.",
+    "category": "macro"
+  },
+  {
+    "term": "Term Premium",
+    "slug": "term-premium",
+    "definition": "The extra return investors may demand for holding a longer-term bond instead of shorter-term bonds.",
+    "category": "bonds"
+  },
+  {
+    "term": "FII",
+    "slug": "fii",
+    "definition": "Foreign Institutional Investor — a foreign institution investing in Indian markets.",
+    "category": "india-markets"
+  },
+  {
+    "term": "DII",
+    "slug": "dii",
+    "definition": "Domestic Institutional Investor — an Indian institution investing in financial markets.",
+    "category": "india-markets"
+  },
+  {
+    "term": "SEBI",
+    "slug": "sebi",
+    "definition": "Securities and Exchange Board of India — the regulator responsible for overseeing India's securities market and protecting investors.",
+    "category": "india-markets"
+  },
+  {
+    "term": "RBI",
+    "slug": "rbi",
+    "definition": "Reserve Bank of India — India's central bank, responsible for monetary policy and important banking and financial-system functions.",
+    "category": "india-markets"
+  },
+  {
+    "term": "NSE",
+    "slug": "nse",
+    "definition": "National Stock Exchange of India — one of India's major stock exchanges.",
+    "category": "india-markets"
+  },
+  {
+    "term": "BSE",
+    "slug": "bse",
+    "definition": "BSE Limited — one of India's major stock exchanges.",
+    "category": "india-markets"
+  },
+  {
+    "term": "NSDL",
+    "slug": "nsdl",
+    "definition": "National Securities Depository Limited — one of India's major securities depositories that holds securities electronically.",
+    "category": "india-markets"
+  },
+  {
+    "term": "CDSL",
+    "slug": "cdsl",
+    "definition": "Central Depository Services (India) Limited — one of India's major securities depositories.",
+    "category": "india-markets"
+  },
+  {
+    "term": "DP",
+    "slug": "dp",
+    "definition": "Depository Participant — an intermediary through which investors access depository services for holding securities electronically.",
+    "category": "india-markets"
+  },
+  {
+    "term": "RTA",
+    "slug": "rta",
+    "definition": "Registrar and Transfer Agent — an entity handling administrative and record-keeping services for investors and securities issuers.",
+    "category": "india-markets"
+  },
+  {
+    "term": "KYC",
+    "slug": "kyc",
+    "definition": "Know Your Customer — the process financial institutions use to verify a customer's identity and required information.",
+    "category": "india-finance"
+  },
+  {
+    "term": "UCC",
+    "slug": "ucc",
+    "definition": "Unique Client Code — a unique identification code used by a broker to identify a client in securities-market transactions.",
+    "category": "india-markets"
+  },
+  {
+    "term": "ASBA",
+    "slug": "asba",
+    "definition": "Application Supported by Blocked Amount — a system used for certain Indian public issues where application money is blocked in the investor's bank account until required.",
+    "category": "india-markets"
+  },
+  {
+    "term": "SCORES",
+    "slug": "scores",
+    "definition": "SEBI Complaints Redress System — an online platform for investors to lodge and track complaints related to the securities market.",
+    "category": "india-markets"
+  },
+  {
+    "term": "PMS",
+    "slug": "pms",
+    "definition": "Portfolio Management Services — a service where a professional manages an investment portfolio for a client according to an agreed strategy.",
+    "category": "india-investments"
+  },
+  {
+    "term": "Investment Advisor",
+    "slug": "investment-advisor",
+    "definition": "A professional or entity that provides investment advice under the applicable regulatory framework.",
+    "category": "india-finance"
+  },
+  {
+    "term": "Research Analyst",
+    "slug": "research-analyst",
+    "definition": "A professional who researches investments and may publish analysis or recommendations about securities.",
+    "category": "research"
+  },
+  {
+    "term": "Promoter",
+    "slug": "promoter",
+    "definition": "A person or group that has significant control or influence over a company and is identified as a promoter under applicable rules.",
+    "category": "india-markets"
+  },
+  {
+    "term": "Promoter Holding",
+    "slug": "promoter-holding",
+    "definition": "The percentage of a company's shares held by its promoters.",
+    "category": "india-markets"
+  },
+  {
+    "term": "Promoter Pledge",
+    "slug": "promoter-pledge",
+    "definition": "When promoters use their shares as collateral to borrow money.",
+    "category": "india-markets"
+  },
+  {
+    "term": "Pledged Shares",
+    "slug": "pledged-shares",
+    "definition": "Shares used as security or collateral for a loan or other financial obligation.",
+    "category": "india-markets"
+  },
+  {
+    "term": "Free Float Market Capitalisation",
+    "slug": "free-float-market-capitalisation",
+    "definition": "Market capitalisation calculated using shares that are freely available for public trading.",
+    "category": "market-structure"
+  },
+  {
+    "term": "Circuit Breaker",
+    "slug": "circuit-breaker",
+    "definition": "A mechanism that temporarily restricts trading or price movements when specified market or security price limits are reached.",
+    "category": "market-structure"
+  },
+  {
+    "term": "REIT",
+    "slug": "reit",
+    "definition": "Real Estate Investment Trust — a structure that owns or finances income-producing real estate and allows investors to participate through securities.",
+    "category": "alternative-investments"
+  },
+  {
+    "term": "InvIT",
+    "slug": "invit",
+    "definition": "Infrastructure Investment Trust — an investment structure that allows investors to participate in income-generating infrastructure assets.",
+    "category": "alternative-investments"
+  },
+  {
+    "term": "Commodity",
+    "slug": "commodity",
+    "definition": "A basic physical good that can be traded, such as gold, crude oil, natural gas or agricultural products.",
+    "category": "commodities"
+  },
+  {
+    "term": "Spot Price",
+    "slug": "spot-price",
+    "definition": "The current market price at which an asset can be bought or sold for immediate delivery.",
+    "category": "commodities"
+  },
+  {
+    "term": "Crude Oil",
+    "slug": "crude-oil",
+    "definition": "A naturally occurring liquid fossil fuel and one of the world's major traded commodities.",
+    "category": "commodities"
+  },
+  {
+    "term": "Gold",
+    "slug": "gold",
+    "definition": "A precious metal widely used as an investment, store of value, jewellery material and industrial commodity.",
+    "category": "commodities"
+  },
+  {
+    "term": "Forex",
+    "slug": "forex",
+    "definition": "Foreign Exchange — the global market where currencies are bought and sold.",
+    "category": "currencies"
+  },
+  {
+    "term": "Exchange Rate",
+    "slug": "exchange-rate",
+    "definition": "The price of one currency expressed in terms of another currency.",
+    "category": "currencies"
+  },
+  {
+    "term": "Currency Appreciation",
+    "slug": "currency-appreciation",
+    "definition": "An increase in the value of one currency relative to another currency.",
+    "category": "currencies"
+  },
+  {
+    "term": "Currency Depreciation",
+    "slug": "currency-depreciation",
+    "definition": "A decrease in the value of one currency relative to another currency.",
+    "category": "currencies"
+  },
+  {
+    "term": "Venture Capital",
+    "slug": "venture-capital",
+    "definition": "Investment made into early-stage or high-growth companies in exchange for an ownership stake.",
+    "category": "private-markets"
+  },
+  {
+    "term": "Private Equity",
+    "slug": "private-equity",
+    "definition": "Investment in companies that are generally not publicly traded, often with the goal of improving and eventually selling the investment.",
+    "category": "private-markets"
+  },
+  {
+    "term": "Angel Investor",
+    "slug": "angel-investor",
+    "definition": "An individual who invests their own money in an early-stage company, often in exchange for equity.",
+    "category": "private-markets"
+  },
+  {
+    "term": "Unicorn",
+    "slug": "unicorn",
+    "definition": "A privately held startup valued at $1 billion or more.",
+    "category": "private-markets"
+  },
+  {
+    "term": "MOIC",
+    "slug": "moic",
+    "definition": "Multiple on Invested Capital — how many times an investment's value or proceeds represent the original amount invested.",
+    "category": "private-markets"
+  },
+  {
+    "term": "DPI",
+    "slug": "dpi",
+    "definition": "Distributions to Paid-In — a private-market performance measure showing how much money has been returned to investors compared with the capital they contributed.",
+    "category": "private-markets"
+  },
+  {
+    "term": "TVPI",
+    "slug": "tvpi",
+    "definition": "Total Value to Paid-In — a private-market measure comparing total distributions and remaining investment value with the amount invested.",
+    "category": "private-markets"
+  },
+  {
+    "term": "Net Worth",
+    "slug": "net-worth",
+    "definition": "The value of everything a person owns minus everything they owe.",
+    "category": "personal-finance"
+  },
+  {
+    "term": "Emergency Fund",
+    "slug": "emergency-fund",
+    "definition": "Money kept aside to cover unexpected expenses or loss of income without needing to sell investments or borrow heavily.",
+    "category": "personal-finance"
+  },
+  {
+    "term": "EMI",
+    "slug": "emi",
+    "definition": "Equated Monthly Instalment — a periodic payment used to repay a loan, generally containing both principal and interest.",
+    "category": "personal-finance"
+  },
+  {
+    "term": "Credit Score",
+    "slug": "credit-score",
+    "definition": "A numerical measure based on credit history that helps lenders assess a person's creditworthiness.",
+    "category": "personal-finance"
+  },
+  {
+    "term": "Interest Rate",
+    "slug": "interest-rate",
+    "definition": "The percentage charged for borrowing money or earned for lending or saving money.",
+    "category": "personal-finance"
+  },
+  {
+    "term": "Simple Interest",
+    "slug": "simple-interest",
+    "definition": "Interest calculated only on the original principal amount.",
+    "category": "personal-finance"
+  },
+  {
+    "term": "Compound Interest",
+    "slug": "compound-interest",
+    "definition": "Interest calculated on the original principal plus previously accumulated interest.",
+    "category": "personal-finance"
+  },
+  {
+    "term": "Loan Principal",
+    "slug": "loan-principal",
+    "definition": "The original amount of money borrowed before interest and other charges.",
+    "category": "personal-finance"
+  },
+  {
+    "term": "Debt",
+    "slug": "debt",
+    "definition": "Money borrowed from another person or institution that must generally be repaid according to agreed terms.",
+    "category": "personal-finance"
+  },
+  {
+    "term": "Financial Independence",
+    "slug": "financial-independence",
+    "definition": "A situation where a person has enough assets or income to cover living expenses without depending entirely on employment income.",
+    "category": "personal-finance"
+  },
+  {
+    "term": "Tax-Loss Harvesting",
+    "slug": "tax-loss-harvesting",
+    "definition": "Selling investments at a loss to potentially offset eligible capital gains for tax purposes, subject to applicable tax rules.",
+    "category": "taxation"
+  },
+  {
+    "term": "Capital Gain",
+    "slug": "capital-gain",
+    "definition": "The profit made when an investment is sold for more than its purchase price.",
+    "category": "taxation"
+  },
+  {
+    "term": "Capital Loss",
+    "slug": "capital-loss",
+    "definition": "The loss incurred when an investment is sold for less than its purchase price.",
+    "category": "taxation"
+  },
+  {
+    "term": "LTCG",
+    "slug": "ltcg",
+    "definition": "Long-Term Capital Gains — gains from selling an investment after holding it for a period that qualifies as long-term under applicable tax rules.",
+    "category": "taxation"
+  },
+  {
+    "term": "STCG",
+    "slug": "stcg",
+    "definition": "Short-Term Capital Gains — gains from selling an investment after holding it for a period that qualifies as short-term under applicable tax rules.",
+    "category": "taxation"
+  },
+  {
+    "term": "Financial Year",
+    "slug": "financial-year",
+    "definition": "A 12-month period used by an organisation or government for accounting and financial reporting.",
+    "category": "basics"
+  },
+  {
+    "term": "Fiscal Year",
+    "slug": "fiscal-year",
+    "definition": "A 12-month period used for accounting, budgeting and financial reporting, which may differ from the calendar year.",
+    "category": "basics"
+  },
+  {
+    "term": "Quarter",
+    "slug": "quarter",
+    "definition": "A three-month period used by companies to report financial results.",
+    "category": "basics"
+  },
+  {
+    "term": "QoQ",
+    "slug": "qoq",
+    "definition": "Quarter-over-Quarter — comparing a company's results with the previous quarter.",
+    "category": "financial-reporting"
+  },
+  {
+    "term": "YoY",
+    "slug": "yoy",
+    "definition": "Year-over-Year — comparing a company's results with the same period in the previous year.",
+    "category": "financial-reporting"
+  },
+  {
+    "term": "MoM",
+    "slug": "mom",
+    "definition": "Month-over-Month — comparing a metric with the previous month.",
+    "category": "financial-reporting"
+  },
+  {
+    "term": "TTM",
+    "slug": "ttm",
+    "definition": "Trailing Twelve Months — a company's financial results from the most recent twelve-month period.",
+    "category": "financial-reporting"
+  },
+  {
+    "term": "Guidance",
+    "slug": "guidance",
+    "definition": "Management's expectations or forecasts about future company performance.",
+    "category": "financial-reporting"
+  },
+  {
+    "term": "Earnings Call",
+    "slug": "earnings-call",
+    "definition": "A discussion where company management explains recent financial results and answers questions from analysts or investors.",
+    "category": "financial-reporting"
+  },
+  {
+    "term": "Annual Report",
+    "slug": "annual-report",
+    "definition": "A yearly report containing important information about a company's financial performance, operations and business.",
+    "category": "financial-reporting"
+  },
+  {
+    "term": "Earnings Surprise",
+    "slug": "earnings-surprise",
+    "definition": "The difference between a company's reported earnings and the earnings analysts or markets were expecting.",
+    "category": "financial-reporting"
   }
 ]
