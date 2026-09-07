@@ -107,6 +107,7 @@ class HTMLGenerator:
             "report": latest_report,
             "archive_dates": archive_dates,
             "report_date": report_date,
+            "date_str": format_date_iso(report_date),
             "date_display": format_date_display(report_date),
         }
         html = self._render("index.html", context)

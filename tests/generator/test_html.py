@@ -96,6 +96,7 @@ class TestHTMLGenerator:
         html = path.read_text(encoding="utf-8")
         assert "Market Digest" in html
         assert "2026-09-06" in html
+        assert f'href="{sample_date.isoformat()}.html"' in html
 
     def test_glossary_page_generated(self, generator, tmp_path):
         from src.glossary.manager import GlossaryManager
