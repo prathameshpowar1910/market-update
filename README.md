@@ -54,6 +54,7 @@ cp .env.example .env
 
 Required keys:
 - `GEMINI_API_KEY` — [Google AI Studio](https://aistudio.google.com/)
+- `GEMINI_MODEL` — optional Gemini model override; defaults to `gemini-2.5-flash`
 - `ALPHA_VANTAGE_API_KEY` — [Alpha Vantage](https://www.alphavantage.co/support/#api-key)
 - `TIINGO_API_KEY` — [Tiingo](https://api.tiingo.com/)
 - `RESEND_API_KEY` — [Resend](https://resend.com/)

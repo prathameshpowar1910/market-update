@@ -42,6 +42,7 @@ jobs:
       - name: Run market digest pipeline
         env:
           GEMINI_API_KEY:          ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL:            ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
           ALPHA_VANTAGE_API_KEY:   ${{ secrets.ALPHA_VANTAGE_API_KEY }}
           TIINGO_API_KEY:          ${{ secrets.TIINGO_API_KEY }}
           RESEND_API_KEY:          ${{ secrets.RESEND_API_KEY }}

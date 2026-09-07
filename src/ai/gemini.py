@@ -31,7 +31,7 @@ from src.utils.validation import parse_json_safely, validate_pydantic
 
 log = get_logger(__name__)
 
-_DEFAULT_MODEL = "gemini-3.6-flash"
+_DEFAULT_MODEL = "gemini-2.5-flash"
 _GENERATION_CONFIG = genai.types.GenerationConfig(
     temperature=0.3,
     response_mime_type="application/json",
@@ -49,9 +49,10 @@ class GeminiClient(AIClient):
     def __init__(
         self,
         api_key: str | None = None,
-        model: str = _DEFAULT_MODEL,
+        model: str | None = None,
     ) -> None:
         key = api_key or os.environ["GEMINI_API_KEY"]
+        model = model or os.getenv("GEMINI_MODEL", _DEFAULT_MODEL)
         genai.configure(api_key=key)
         self._model = genai.GenerativeModel(
             model_name=model,
