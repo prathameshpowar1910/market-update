@@ -31,7 +31,7 @@ from src.utils.validation import parse_json_safely, validate_pydantic
 
 log = get_logger(__name__)
 
-_DEFAULT_MODEL = "gemini-1.5-flash"
+_DEFAULT_MODEL = "gemini-3.6-flash"
 _GENERATION_CONFIG = genai.types.GenerationConfig(
     temperature=0.3,
     response_mime_type="application/json",

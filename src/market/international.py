@@ -28,7 +28,7 @@ from src.utils.logging import get_logger
 log = get_logger(__name__)
 
 _BASE_URL = "https://www.alphavantage.co/query"
-_RATE_LIMIT_DELAY = 12.5  # 5 calls/min on free tier
+_RATE_LIMIT_DELAY = 2.0  # Seconds between requests
 
 _INTL_INDICES = [
     {"symbol": "SPY",  "name": "S&P 500",   "display_name": "S&P 500"},
@@ -53,16 +53,17 @@ class AlphaVantageInternationalClient:
         self._key = api_key or os.environ["ALPHA_VANTAGE_API_KEY"]
         self._client = httpx.Client(timeout=30)
 
-    @retry(stop=stop_after_attempt(3), wait=wait_exponential(min=2, max=30))
     def _get(self, params: dict) -> dict:
         params["apikey"] = self._key
         resp = self._client.get(_BASE_URL, params=params)
         resp.raise_for_status()
         data = resp.json()
         if "Note" in data:
-            raise RuntimeError(f"Alpha Vantage rate limit: {data['Note']}")
+            log.warning("Alpha Vantage rate limit: %s", data["Note"])
+            return {}
         if "Error Message" in data:
-            raise RuntimeError(f"Alpha Vantage error: {data['Error Message']}")
+            log.warning("Alpha Vantage error: %s", data["Error Message"])
+            return {}
         return data
 
     def _quote(self, symbol: str) -> dict:

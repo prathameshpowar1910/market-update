@@ -12,6 +12,7 @@ from datetime import date
 
 from src.market.models import IndiaMarketData, InternationalMarketData
 from src.news.models import NewsItem
+from src.utils.dates import format_date_display
 
 
 def build_daily_report_prompt(
@@ -99,7 +100,7 @@ def build_daily_report_prompt(
 
     return f"""You are a senior financial analyst writing a daily market digest for educated retail investors.
 
-Today's date: {report_date.strftime("%B %-d, %Y")} ({report_date.isoformat()})
+Today's date: {format_date_display(report_date)} ({report_date.isoformat()})
 
 ═══════════════════════════════════════════════════════════════
 INDIAN MARKET DATA

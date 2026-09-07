@@ -35,8 +35,8 @@ _BASE_URL = "https://www.alphavantage.co/query"
 
 # ── NSE index symbols recognised by Alpha Vantage ───────────────────────────
 _INDIA_INDICES = [
-    {"symbol": "NIFTY_50",  "name": "Nifty 50",  "display_name": "NIFTY 50"},
-    {"symbol": "SENSEX",    "name": "Sensex",     "display_name": "Sensex"},
+    {"symbol": "NIFTYBEES.BSE", "name": "Nifty 50", "display_name": "NIFTY 50"},
+    {"symbol": "BSESN",         "name": "Sensex",   "display_name": "Sensex"},
 ]
 
 # Sector proxy ETFs listed on NSE (Alpha Vantage GLOBAL_QUOTE)
@@ -51,11 +51,11 @@ _SECTOR_SYMBOLS: dict[str, str] = {
 
 # Large-cap NSE stocks for top-movers heuristic
 _NIFTY_MOVERS = [
-    "RELIANCE.BSE", "TCS.BSE", "HDFC.BSE", "INFY.BSE", "ICICIBANK.BSE",
+    "RELIANCE.BSE", "TCS.BSE", "HDFCBANK.BSE", "INFY.BSE", "ICICIBANK.BSE",
     "WIPRO.BSE", "LT.BSE", "AXISBANK.BSE", "HCLTECH.BSE", "BAJFINANCE.BSE",
 ]
 
-_RATE_LIMIT_DELAY = 12.5  # Alpha Vantage free tier: 5 calls/min → 12s apart
+_RATE_LIMIT_DELAY = 2.0  # Seconds between requests
 
 
 class AlphaVantageIndiaClient:
@@ -67,16 +67,17 @@ class AlphaVantageIndiaClient:
 
     # ── internal helpers ─────────────────────────────────────────────────────
 
-    @retry(stop=stop_after_attempt(3), wait=wait_exponential(min=2, max=30))
     def _get(self, params: dict) -> dict:
         params["apikey"] = self._key
         resp = self._client.get(_BASE_URL, params=params)
         resp.raise_for_status()
         data = resp.json()
         if "Note" in data:
-            raise RuntimeError(f"Alpha Vantage rate limit: {data['Note']}")
+            log.warning("Alpha Vantage rate limit: %s", data["Note"])
+            return {}
         if "Error Message" in data:
-            raise RuntimeError(f"Alpha Vantage error: {data['Error Message']}")
+            log.warning("Alpha Vantage error: %s", data["Error Message"])
+            return {}
         return data
 
     def _quote(self, symbol: str) -> dict:
