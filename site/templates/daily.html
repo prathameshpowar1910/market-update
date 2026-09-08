@@ -24,6 +24,42 @@
   </div>
 </section>
 
+<section class="market-pulse" aria-label="Market pulse">
+  <div class="container">
+    <div class="pulse-heading">
+      <div>
+        <p class="pulse-kicker">SESSION SNAPSHOT</p>
+        <h2>Market pulse</h2>
+      </div>
+      <span class="pulse-date">{{ date_display }}</span>
+    </div>
+    <div class="pulse-grid">
+      <article class="pulse-card">
+        <span class="pulse-label">Sector breadth</span>
+        <strong>{{ market_snapshot.advancing_sectors }} <span>up</span> / {{ market_snapshot.declining_sectors }} <span>down</span></strong>
+        <div class="breadth-track" aria-label="{{ market_snapshot.advancing_sectors }} sectors advancing and {{ market_snapshot.declining_sectors }} declining">
+          {% if market_snapshot.sector_count %}<span style="width: {{ (market_snapshot.advancing_sectors / market_snapshot.sector_count * 100) | round(0) }}%"></span>{% endif %}
+        </div>
+      </article>
+      <article class="pulse-card">
+        <span class="pulse-label">Average sector move</span>
+        <strong class="{% if market_snapshot.average_sector_change > 0 %}pulse-positive{% elif market_snapshot.average_sector_change < 0 %}pulse-negative{% endif %}">{{ "{:+.2f}".format(market_snapshot.average_sector_change) }}%</strong>
+        <small>Across {{ market_snapshot.sector_count }} tracked sectors</small>
+      </article>
+      <article class="pulse-card">
+        <span class="pulse-label">Leading sector</span>
+        <strong>{{ market_snapshot.strongest_sector.name if market_snapshot.strongest_sector else 'No sector data' }}</strong>
+        <small>{% if market_snapshot.strongest_sector %}{{ "{:+.2f}".format(market_snapshot.strongest_sector.change_pct) }}% today{% endif %}</small>
+      </article>
+      <article class="pulse-card">
+        <span class="pulse-label">Stock movers</span>
+        <strong>{{ market_snapshot.gainer_count }} <span class="pulse-positive">gainers</span></strong>
+        <small>{{ market_snapshot.loser_count }} losers tracked</small>
+      </article>
+    </div>
+  </div>
+</section>
+
 <div class="container page-body">
 
   <!-- ── TL;DR ────────────────────────────────────────────────────────── -->

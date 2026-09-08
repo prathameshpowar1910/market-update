@@ -68,6 +68,30 @@ class HTMLGenerator:
             shutil.copytree(str(self._static_dir), str(dest), dirs_exist_ok=True)
             log.info("Static assets copied to %s", dest)
 
+    @staticmethod
+    def _market_snapshot(india: IndiaMarketData) -> dict[str, object]:
+        """Build compact dashboard metrics from the Indian market snapshot."""
+        sectors = india.sectors
+        advancing = sum(1 for sector in sectors if sector.change_pct > 0)
+        declining = sum(1 for sector in sectors if sector.change_pct < 0)
+        average_change = (
+            sum(sector.change_pct for sector in sectors) / len(sectors)
+            if sectors else 0
+        )
+        strongest = max(sectors, key=lambda sector: sector.change_pct, default=None)
+        weakest = min(sectors, key=lambda sector: sector.change_pct, default=None)
+        return {
+            "index_count": len(india.indices),
+            "sector_count": len(sectors),
+            "advancing_sectors": advancing,
+            "declining_sectors": declining,
+            "average_sector_change": average_change,
+            "strongest_sector": strongest,
+            "weakest_sector": weakest,
+            "gainer_count": len(india.top_gainers),
+            "loser_count": len(india.top_losers),
+        }
+
     # ── public API ───────────────────────────────────────────────────────────
 
     def generate_daily(
@@ -90,6 +114,7 @@ class HTMLGenerator:
             "report_date": report_date,
             "date_str": date_str,
             "date_display": format_date_display(report_date),
+            "market_snapshot": self._market_snapshot(india),
         }
         html = self._render("daily.html", context)
         # Post-process: wrap glossary terms with links
