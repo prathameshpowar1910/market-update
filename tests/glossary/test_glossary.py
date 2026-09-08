@@ -209,6 +209,12 @@ class TestLinker:
         out = link_glossary_terms(html, entries)
         assert 'href="glossary.html#market-breadth"' in out
 
+    def test_terms_in_html_attributes_are_not_linked(self, entries):
+        html = '<meta name="description" content="Market Breadth improved today."><p>Market Breadth improved.</p>'
+        out = link_glossary_terms(html, entries)
+        assert '<meta name="description" content="Market Breadth improved today.">' in out
+        assert out.count('href="glossary.html#market-breadth"') == 1
+
     def test_no_entries_returns_unchanged(self):
         html = "<p>Some text here.</p>"
         out = link_glossary_terms(html, [])

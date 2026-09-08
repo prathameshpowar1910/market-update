@@ -8,7 +8,7 @@ Example:
 Rules:
   • Only links the FIRST occurrence of each term per HTML block
   • Case-insensitive matching, preserves original capitalisation
-  • Does not modify text inside existing <a>, <code>, <pre> tags
+    • Does not modify HTML tags or content inside <a>, <code>, <pre> tags
   • Longest-match-first to avoid partial replacements
 """
 
@@ -23,7 +23,7 @@ log = get_logger(__name__)
 
 # Tags whose content should never be modified
 _PROTECTED_TAGS = re.compile(
-    r"<(a|code|pre|script|style)[^>]*>.*?</\1>",
+    r"<(a|code|pre|script|style)\b[^>]*>.*?</\1\s*>|<[^>]+>",
     re.DOTALL | re.IGNORECASE,
 )
 
