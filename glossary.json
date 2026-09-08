@@ -2371,5 +2371,12 @@
     "definition": "Actions taken by a central bank to raise benchmark interest rates or reduce money supply to cool down economic growth and control inflation.",
     "category": "macro",
     "added_date": "2026-09-08"
+  },
+  {
+    "term": "Counter-Tariff",
+    "slug": "counter-tariff",
+    "definition": "A tax imposed by a country on imported goods in direct retaliation against tariffs levied by a trading partner.",
+    "category": "macro",
+    "added_date": "2026-09-08"
   }
 ]
