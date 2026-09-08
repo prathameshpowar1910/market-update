@@ -56,6 +56,13 @@
           {{ "{:+.2f}".format(idx.change) }}
           ({{ "{:+.2f}".format(idx.change_pct) }}%)
         </span>
+        {% if idx.previous_close is not none or idx.volume is not none %}
+        <span class="index-meta">
+          {% if idx.previous_close is not none %}Prev close {{ "{:,.2f}".format(idx.previous_close) }}{% endif %}
+          {% if idx.previous_close is not none and idx.volume is not none %}<span aria-hidden="true"> · </span>{% endif %}
+          {% if idx.volume is not none %}Vol {{ "{:,.0f}".format(idx.volume) }}{% endif %}
+        </span>
+        {% endif %}
       </article>
       {% endfor %}
     </div>
@@ -159,6 +166,11 @@
       <article class="index-card index-card--small" aria-label="{{ fx.pair }} exchange rate">
         <span class="index-name">{{ fx.pair }}</span>
         <span class="index-price">{{ "%.4f" | format(fx.rate) }}</span>
+        {% if fx.change_pct is not none %}
+        <span class="index-change {% if fx.change_pct >= 0 %}direction-up{% else %}direction-down{% endif %}">
+          {{ "{:+.2f}".format(fx.change_pct) }}%
+        </span>
+        {% endif %}
       </article>
       {% endfor %}
 
@@ -166,6 +178,7 @@
       <article class="index-card index-card--small" aria-label="{{ c.name }} price">
         <span class="index-name">{{ c.name }}</span>
         <span class="index-price">${{ "{:,.2f}".format(c.price) }}</span>
+        <span class="index-meta">{{ c.unit }}</span>
         {% if c.change_pct is not none %}
         <span class="index-change {% if c.change_pct >= 0 %}direction-up{% else %}direction-down{% endif %}">
           {{ "{:+.2f}".format(c.change_pct) }}%
@@ -216,6 +229,7 @@
       <li class="news-item">
         <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" class="news-link">
           <span class="news-title">{{ item.title }}</span>
+          {% if item.summary %}<span class="news-summary">{{ item.summary }}</span>{% endif %}
           <span class="news-meta">
             <span class="news-source">{{ item.source }}</span>
             {% if item.published_at %}

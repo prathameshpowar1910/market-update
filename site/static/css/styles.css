@@ -426,6 +426,13 @@ img, svg { display: block; max-width: 100%; }
 .direction-flat .index-change { color: var(--clr-flat); }
 
 .index-card--small .index-price { font-size: var(--text-lg); }
+.index-meta {
+  color: var(--clr-text-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+}
 
 /* ── Narrative / Summary Text ────────────────────────────────────────────── */
 .narrative-block {
@@ -632,6 +639,11 @@ img, svg { display: block; max-width: 100%; }
 }
 
 .news-title { font-size: var(--text-sm); font-weight: var(--weight-medium); line-height: 1.5; }
+.news-summary {
+  color: var(--clr-text-2);
+  font-size: var(--text-xs);
+  line-height: 1.55;
+}
 .news-meta  { display: flex; gap: var(--space-3); align-items: center; }
 .news-source { font-size: var(--text-xs); color: var(--clr-accent); font-weight: var(--weight-semi); }
 .news-date   { font-size: var(--text-xs); color: var(--clr-text-3); }

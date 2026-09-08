@@ -74,6 +74,21 @@ class TestHTMLGenerator:
         assert "Daily Market Report" in html
         assert "NIFTY 50" in html
 
+    def test_daily_page_includes_optional_market_details(self, generator, sample_report, india_data, intl_data, sample_glossary_entries, sample_date):
+        india_data.indices[0].previous_close = 24700
+        india_data.indices[0].volume = 1234567
+        path = generator.generate_daily(
+            report=sample_report,
+            india=india_data,
+            intl=intl_data,
+            news=[],
+            glossary_entries=sample_glossary_entries,
+            report_date=sample_date,
+        )
+        html = path.read_text(encoding="utf-8")
+        assert "Prev close" in html
+        assert "Vol 1,234,567" in html
+
     def test_daily_page_contains_tldr(self, generator, sample_report, india_data, intl_data, sample_glossary_entries, sample_date):
         path = generator.generate_daily(
             report=sample_report,
