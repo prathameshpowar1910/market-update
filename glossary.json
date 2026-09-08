@@ -2378,5 +2378,12 @@
     "definition": "A tax imposed by a country on imported goods in direct retaliation against tariffs levied by a trading partner.",
     "category": "macro",
     "added_date": "2026-09-08"
+  },
+  {
+    "term": "Tariff",
+    "slug": "tariff",
+    "definition": "A tax imposed by a government on imported goods, often used as an economic leverage or protectionist measure.",
+    "category": "macro",
+    "added_date": "2026-09-08"
   }
 ]
