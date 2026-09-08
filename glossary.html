@@ -7,7 +7,7 @@
 
   <!-- SEO -->
   <title>Financial Glossary — Market Digest</title>
-  <meta name="description" content="Plain-English definitions of 339 financial terms — automatically grown by the Market Digest AI pipeline. From P/E Ratio to Yield Curve." />
+  <meta name="description" content="Plain-English definitions of 340 financial terms — automatically grown by the Market Digest AI pipeline. From P/E Ratio to Yield Curve." />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
@@ -49,26 +49,87 @@
 
 <section class="glossary-hero" aria-labelledby="glossary-heading">
   <div class="container">
+    <p class="glossary-kicker">REFERENCE / 340 TERMS</p>
     <h1 id="glossary-heading" class="section-title">
-      <span class="section-icon" aria-hidden="true">📖</span> Financial Glossary
+      <span class="section-icon" aria-hidden="true">GLOSSARY</span> Financial Glossary
     </h1>
     <p class="glossary-intro">
-      339 terms and counting — automatically grown each day by the AI pipeline.
+      340 terms and counting — automatically grown each day by the AI pipeline.
       Terms are linked inline in every daily report.
     </p>
 
-    <!-- Search -->
-    <div class="glossary-search-wrap">
-      <label for="glossary-search" class="sr-only">Search glossary</label>
-      <input
-        id="glossary-search"
-        type="search"
-        class="glossary-search"
-        placeholder="Search terms…"
-        aria-label="Search glossary terms"
-        autocomplete="off"
-      />
+    <div class="glossary-controls" role="search">
+      <div class="glossary-search-wrap">
+        <label for="glossary-search" class="sr-only">Search glossary</label>
+        <input id="glossary-search" type="search" class="glossary-search"
+          placeholder="Search terms or definitions" aria-label="Search glossary terms" autocomplete="off" />
+      </div>
+      <label class="glossary-filter-label" for="glossary-category">Category</label>
+      <select id="glossary-category" class="glossary-category-filter" aria-label="Filter by category">
+        <option value="">All categories</option>
+        
+        <option value="accounting">Accounting</option>
+        
+        <option value="alternative-investments">Alternative Investments</option>
+        
+        <option value="basics">Basics</option>
+        
+        <option value="bonds">Bonds</option>
+        
+        <option value="commodities">Commodities</option>
+        
+        <option value="corporate-actions">Corporate Actions</option>
+        
+        <option value="currencies">Currencies</option>
+        
+        <option value="derivatives">Derivatives</option>
+        
+        <option value="financial-reporting">Financial Reporting</option>
+        
+        <option value="fundamentals">Fundamentals</option>
+        
+        <option value="india-finance">India Finance</option>
+        
+        <option value="india-investments">India Investments</option>
+        
+        <option value="india-markets">India Markets</option>
+        
+        <option value="macro">Macro</option>
+        
+        <option value="market-structure">Market Structure</option>
+        
+        <option value="money-market">Money Market</option>
+        
+        <option value="mutual-funds">Mutual Funds</option>
+        
+        <option value="options-greeks">Options Greeks</option>
+        
+        <option value="personal-finance">Personal Finance</option>
+        
+        <option value="portfolio">Portfolio</option>
+        
+        <option value="primary-market">Primary Market</option>
+        
+        <option value="private-markets">Private Markets</option>
+        
+        <option value="research">Research</option>
+        
+        <option value="risk">Risk</option>
+        
+        <option value="stocks">Stocks</option>
+        
+        <option value="taxation">Taxation</option>
+        
+        <option value="technical-analysis">Technical Analysis</option>
+        
+        <option value="trading">Trading</option>
+        
+        <option value="valuation">Valuation</option>
+        
+      </select>
+      <button type="button" id="glossary-clear" class="glossary-clear" hidden>Clear</button>
     </div>
+    <p id="glossary-results" class="glossary-results" aria-live="polite">Showing 340 terms</p>
 
     <!-- Letter navigation -->
     <nav class="letter-nav" aria-label="Glossary alphabet navigation">
@@ -828,6 +889,18 @@
           <div class="glossary-entry-meta">
             <span class="entry-added">Added </span>
             <a href="#corporate-bond" class="entry-anchor" aria-label="Permalink for Corporate Bond">#</a>
+          </div>
+        </div>
+        
+        <div class="glossary-entry" id="counter-tariff" data-term="counter-tariff" data-category="macro">
+          <dt class="glossary-term">
+            Counter-Tariff
+            <span class="glossary-category-badge">macro</span>
+          </dt>
+          <dd class="glossary-definition">A tax imposed by a country on imported goods in direct retaliation against tariffs levied by a trading partner.</dd>
+          <div class="glossary-entry-meta">
+            <span class="entry-added">Added 2026-09-08</span>
+            <a href="#counter-tariff" class="entry-anchor" aria-label="Permalink for Counter-Tariff">#</a>
           </div>
         </div>
         
@@ -4393,7 +4466,7 @@
     
 
     <div id="glossary-no-results" class="glossary-empty" style="display:none" aria-live="polite">
-      <span aria-hidden="true">🔍</span> No matching terms found.
+      No matching terms found. Try another search or category.
     </div>
   </div>
 </div>

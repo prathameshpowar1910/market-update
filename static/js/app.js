@@ -8,20 +8,25 @@
   const searchInput = document.getElementById('glossary-search');
   if (!searchInput) return;
 
+  const categoryInput = document.getElementById('glossary-category');
+  const clearButton = document.getElementById('glossary-clear');
+  const resultCount = document.getElementById('glossary-results');
   const entries     = document.querySelectorAll('.glossary-entry');
   const sections    = document.querySelectorAll('.glossary-letter-section');
   const noResults   = document.getElementById('glossary-no-results');
 
-  function filterGlossary(query) {
+  function filterGlossary(query, category = categoryInput?.value || '') {
     const q = query.trim().toLowerCase();
     let anyVisible = false;
+    let visibleCount = 0;
 
     entries.forEach(entry => {
       const term = entry.dataset.term || '';
       const def  = entry.querySelector('.glossary-definition')?.textContent.toLowerCase() || '';
-      const match = !q || term.includes(q) || def.includes(q);
+      const matchesCategory = !category || entry.dataset.category === category;
+      const match = matchesCategory && (!q || term.includes(q) || def.includes(q));
       entry.style.display = match ? '' : 'none';
-      if (match) anyVisible = true;
+      if (match) { anyVisible = true; visibleCount += 1; }
     });
 
     // Hide letter headers that have no visible entries
@@ -32,10 +37,19 @@
     });
 
     if (noResults) noResults.style.display = anyVisible ? 'none' : '';
+    if (resultCount) resultCount.textContent = `Showing ${visibleCount} of ${entries.length} terms`;
+    if (clearButton) clearButton.hidden = !q && !category;
   }
 
   searchInput.addEventListener('input', e => filterGlossary(e.target.value));
   searchInput.addEventListener('search', e => filterGlossary(e.target.value));
+  categoryInput?.addEventListener('change', () => filterGlossary(searchInput.value));
+  clearButton?.addEventListener('click', () => {
+    searchInput.value = '';
+    if (categoryInput) categoryInput.value = '';
+    filterGlossary('');
+    searchInput.focus();
+  });
 })();
 
 
