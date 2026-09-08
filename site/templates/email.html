@@ -155,6 +155,25 @@
       </td>
     </tr>
 
+    {% if report.sectors %}
+    <!-- ── Sector Watch ─────────────────────────────────────────── -->
+    <tr>
+      <td class="email-pad" style="background:#0d1425;padding:28px 40px;border-bottom:1px solid #1e2d4d;">
+        <h2 style="margin:0 0 14px;font-size:16px;font-weight:700;color:#e8ecf5;">Sector Watch</h2>
+        {% for sector in report.sectors[:5] %}
+        <table width="100%" role="presentation" border="0" cellspacing="0" cellpadding="0" style="padding:10px 0;border-bottom:1px solid #1e2d4d;">
+          <tr>
+            <td valign="top" style="width:34%;font-size:13px;font-weight:600;color:#e8ecf5;">{{ sector.name }}</td>
+            <td valign="top" style="font-size:13px;line-height:1.5;color:#94a3b8;">{{ sector.performance }}<br>
+              <span style="font-size:11px;font-weight:600;{% if sector.outlook == 'positive' %}color:#22c55e;{% elif sector.outlook == 'negative' %}color:#ef4444;{% else %}color:#f59e0b;{% endif %}">{{ sector.outlook | capitalize }} outlook</span>
+            </td>
+          </tr>
+        </table>
+        {% endfor %}
+      </td>
+    </tr>
+    {% endif %}
+
     {% if news %}
     <!-- ── News Brief ──────────────────────────────────────────── -->
     <tr>

@@ -88,6 +88,17 @@ class TestEmailGenerator:
         )
         assert sample_report.tldr[0] in html
 
+    def test_sector_watch_present(self, generator, sample_report, india_data, intl_data, sample_date):
+        html = generator.render_email(
+            report=sample_report,
+            india=india_data,
+            intl=intl_data,
+            news=[],
+            report_date=sample_date,
+        )
+        assert "Sector Watch" in html
+        assert sample_report.sectors[0].name in html
+
     def test_correct_subject_format(self):
         from src.utils.dates import format_date_display
         d = date(2026, 9, 7)
