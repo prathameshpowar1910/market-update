@@ -127,6 +127,7 @@ class HTMLGenerator:
             "grouped": grouped,
             "total": len(sorted_entries),
             "letters": sorted(grouped.keys()),
+            "categories": sorted({entry.category for entry in sorted_entries}),
         }
         html = self._render("glossary.html", context)
         return self._write("glossary.html", html)

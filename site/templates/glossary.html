@@ -8,26 +8,31 @@
 
 <section class="glossary-hero" aria-labelledby="glossary-heading">
   <div class="container">
+    <p class="glossary-kicker">REFERENCE / {{ total }} TERMS</p>
     <h1 id="glossary-heading" class="section-title">
-      <span class="section-icon" aria-hidden="true">📖</span> Financial Glossary
+      <span class="section-icon" aria-hidden="true">GLOSSARY</span> Financial Glossary
     </h1>
     <p class="glossary-intro">
       {{ total }} terms and counting — automatically grown each day by the AI pipeline.
       Terms are linked inline in every daily report.
     </p>
 
-    <!-- Search -->
-    <div class="glossary-search-wrap">
-      <label for="glossary-search" class="sr-only">Search glossary</label>
-      <input
-        id="glossary-search"
-        type="search"
-        class="glossary-search"
-        placeholder="Search terms…"
-        aria-label="Search glossary terms"
-        autocomplete="off"
-      />
+    <div class="glossary-controls" role="search">
+      <div class="glossary-search-wrap">
+        <label for="glossary-search" class="sr-only">Search glossary</label>
+        <input id="glossary-search" type="search" class="glossary-search"
+          placeholder="Search terms or definitions" aria-label="Search glossary terms" autocomplete="off" />
+      </div>
+      <label class="glossary-filter-label" for="glossary-category">Category</label>
+      <select id="glossary-category" class="glossary-category-filter" aria-label="Filter by category">
+        <option value="">All categories</option>
+        {% for category in categories %}
+        <option value="{{ category }}">{{ category | replace('-', ' ') | title }}</option>
+        {% endfor %}
+      </select>
+      <button type="button" id="glossary-clear" class="glossary-clear" hidden>Clear</button>
     </div>
+    <p id="glossary-results" class="glossary-results" aria-live="polite">Showing {{ total }} terms</p>
 
     <!-- Letter navigation -->
     <nav class="letter-nav" aria-label="Glossary alphabet navigation">
@@ -62,7 +67,7 @@
     {% endfor %}
 
     <div id="glossary-no-results" class="glossary-empty" style="display:none" aria-live="polite">
-      <span aria-hidden="true">🔍</span> No matching terms found.
+      No matching terms found. Try another search or category.
     </div>
   </div>
 </div>
