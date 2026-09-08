@@ -30,7 +30,7 @@
   <!-- ── Latest at a glance ────────────────────────────────────────────── -->
   <section class="section" aria-labelledby="latest-heading">
     <h2 id="latest-heading" class="section-title">
-      <span class="section-icon" aria-hidden="true">📅</span> Latest — {{ date_display }}
+      <span class="section-icon" aria-hidden="true">LATEST</span> {{ date_display }}
     </h2>
 
     <div class="glance-card sentiment-{{ report.overall_sentiment }}">
@@ -57,7 +57,7 @@
   {% if archive_dates %}
   <section class="section" aria-labelledby="archive-heading">
     <h2 id="archive-heading" class="section-title">
-      <span class="section-icon" aria-hidden="true">🗂️</span> Past Reports
+      <span class="section-icon" aria-hidden="true">ARCHIVE</span> Past Reports
     </h2>
     <ul class="archive-list" role="list">
       {% for d in archive_dates %}

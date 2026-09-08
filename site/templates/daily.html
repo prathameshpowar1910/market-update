@@ -29,7 +29,7 @@
   <!-- ── TL;DR ────────────────────────────────────────────────────────── -->
   <section class="section" aria-labelledby="tldr-heading">
     <h2 id="tldr-heading" class="section-title">
-      <span class="section-icon" aria-hidden="true">⚡</span> TL;DR
+      <span class="section-icon" aria-hidden="true">BRIEF</span> TL;DR
     </h2>
     <ul class="tldr-list" role="list">
       {% for bullet in report.tldr %}
@@ -44,7 +44,7 @@
   <!-- ── Indian Market Indices ────────────────────────────────────────── -->
   <section class="section" aria-labelledby="india-indices-heading">
     <h2 id="india-indices-heading" class="section-title">
-      <span class="section-icon" aria-hidden="true">🇮🇳</span> Indian Markets
+      <span class="section-icon" aria-hidden="true">IN</span> Indian Markets
     </h2>
     <div class="index-grid">
       {% for idx in india.indices %}
@@ -74,7 +74,7 @@
   {% if india.sectors %}
   <section class="section" aria-labelledby="sectors-heading">
     <h2 id="sectors-heading" class="section-title">
-      <span class="section-icon" aria-hidden="true">🏭</span> Sector Performance
+      <span class="section-icon" aria-hidden="true">SECTORS</span> Sector Performance
     </h2>
     <div class="sector-grid">
       {% for sector in india.sectors %}
@@ -104,7 +104,7 @@
   {% if india.top_gainers or india.top_losers %}
   <section class="section" aria-labelledby="movers-heading">
     <h2 id="movers-heading" class="section-title">
-      <span class="section-icon" aria-hidden="true">🚀</span> Top Movers
+      <span class="section-icon" aria-hidden="true">MOVERS</span> Top Movers
     </h2>
     <div class="movers-grid">
       {% if india.top_gainers %}
@@ -139,7 +139,7 @@
   <!-- ── International Markets ────────────────────────────────────────── -->
   <section class="section" aria-labelledby="intl-heading">
     <h2 id="intl-heading" class="section-title">
-      <span class="section-icon" aria-hidden="true">🌍</span> Global Markets
+      <span class="section-icon" aria-hidden="true">GLOBAL</span> Global Markets
     </h2>
     <div class="index-grid">
       {% for idx in intl.indices %}
@@ -188,7 +188,7 @@
   {% if report.key_events %}
   <section class="section" aria-labelledby="events-heading">
     <h2 id="events-heading" class="section-title">
-      <span class="section-icon" aria-hidden="true">📌</span> Key Events
+      <span class="section-icon" aria-hidden="true">EVENTS</span> Key Events
     </h2>
     <div class="events-list">
       {% for event in report.key_events %}
@@ -209,7 +209,7 @@
   {% if news %}
   <section class="section" aria-labelledby="news-heading">
     <h2 id="news-heading" class="section-title">
-      <span class="section-icon" aria-hidden="true">📰</span> Today's Market News
+      <span class="section-icon" aria-hidden="true">NEWS</span> Today's Market News
     </h2>
     <ul class="news-list" role="list">
       {% for item in news %}
