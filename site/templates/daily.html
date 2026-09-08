@@ -77,6 +77,38 @@
     </ul>
   </section>
 
+  <section class="section" aria-labelledby="scorecard-heading">
+    <h2 id="scorecard-heading" class="section-title">
+      <span class="section-icon" aria-hidden="true">SCORECARD</span> What changed today
+    </h2>
+    <div class="scorecard-grid">
+      <article class="scorecard-card">
+        <span class="scorecard-label">Indian leadership</span>
+        <strong>{{ market_snapshot.strongest_sector.name if market_snapshot.strongest_sector else 'No sector data' }}</strong>
+        <span class="scorecard-detail {% if market_snapshot.strongest_sector and market_snapshot.strongest_sector.change_pct >= 0 %}direction-up{% else %}direction-down{% endif %}">
+          {% if market_snapshot.strongest_sector %}{{ "{:+.2f}".format(market_snapshot.strongest_sector.change_pct) }}%{% endif %}
+        </span>
+      </article>
+      <article class="scorecard-card">
+        <span class="scorecard-label">Indian laggard</span>
+        <strong>{{ market_snapshot.weakest_sector.name if market_snapshot.weakest_sector else 'No sector data' }}</strong>
+        <span class="scorecard-detail {% if market_snapshot.weakest_sector and market_snapshot.weakest_sector.change_pct >= 0 %}direction-up{% else %}direction-down{% endif %}">
+          {% if market_snapshot.weakest_sector %}{{ "{:+.2f}".format(market_snapshot.weakest_sector.change_pct) }}%{% endif %}
+        </span>
+      </article>
+      <article class="scorecard-card">
+        <span class="scorecard-label">Global tone</span>
+        <strong>{{ global_snapshot.positive_indices }} up / {{ global_snapshot.negative_indices }} down</strong>
+        <span class="scorecard-detail">{{ global_snapshot.index_count }} benchmarks tracked</span>
+      </article>
+      <article class="scorecard-card">
+        <span class="scorecard-label">Cross-asset watch</span>
+        <strong>{{ global_snapshot.forex_count }} FX · {{ global_snapshot.commodity_count }} commodities</strong>
+        <span class="scorecard-detail">Rates and raw materials</span>
+      </article>
+    </div>
+  </section>
+
   <!-- ── Indian Market Indices ────────────────────────────────────────── -->
   <section class="section" aria-labelledby="india-indices-heading">
     <h2 id="india-indices-heading" class="section-title">

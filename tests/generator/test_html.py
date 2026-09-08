@@ -75,6 +75,8 @@ class TestHTMLGenerator:
         assert "NIFTY 50" in html
         assert "Market pulse" in html
         assert "Sector breadth" in html
+        assert "What changed today" in html
+        assert "Cross-asset watch" in html
 
     def test_daily_page_includes_optional_market_details(self, generator, sample_report, india_data, intl_data, sample_glossary_entries, sample_date):
         india_data.indices[0].previous_close = 24700

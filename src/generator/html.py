@@ -92,6 +92,22 @@ class HTMLGenerator:
             "loser_count": len(india.top_losers),
         }
 
+    @staticmethod
+    def _global_snapshot(intl: InternationalMarketData) -> dict[str, object]:
+        """Build cross-asset context from the international snapshot."""
+        indices = intl.indices
+        strongest = max(indices, key=lambda index: index.change_pct, default=None)
+        weakest = min(indices, key=lambda index: index.change_pct, default=None)
+        return {
+            "index_count": len(indices),
+            "positive_indices": sum(1 for index in indices if index.change_pct > 0),
+            "negative_indices": sum(1 for index in indices if index.change_pct < 0),
+            "strongest_index": strongest,
+            "weakest_index": weakest,
+            "forex_count": len(intl.forex),
+            "commodity_count": len(intl.commodities),
+        }
+
     # ── public API ───────────────────────────────────────────────────────────
 
     def generate_daily(
@@ -115,6 +131,7 @@ class HTMLGenerator:
             "date_str": date_str,
             "date_display": format_date_display(report_date),
             "market_snapshot": self._market_snapshot(india),
+            "global_snapshot": self._global_snapshot(intl),
         }
         html = self._render("daily.html", context)
         # Post-process: wrap glossary terms with links
