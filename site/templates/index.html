@@ -27,6 +27,35 @@
 
 <div class="container page-body">
 
+  <section class="home-snapshot" aria-labelledby="snapshot-heading">
+    <div class="snapshot-heading">
+      <div>
+        <p class="pulse-kicker">MARKET SNAPSHOT</p>
+        <h2 id="snapshot-heading">Today in numbers</h2>
+      </div>
+      <span class="snapshot-note">{{ india.indices | length }} Indian indices · {{ intl.indices | length }} global benchmarks</span>
+    </div>
+    <div class="home-snapshot-grid">
+      {% for idx in india.indices %}
+      <a class="snapshot-stat direction-{{ idx.direction.value }}" href="{{ date_str }}.html#india-indices-heading">
+        <span class="snapshot-label">{{ idx.display_name }}</span>
+        <strong>{{ "{:,.2f}".format(idx.price) }}</strong>
+        <span>{{ "{:+.2f}".format(idx.change_pct) }}%</span>
+      </a>
+      {% endfor %}
+      <div class="snapshot-stat">
+        <span class="snapshot-label">Sector breadth</span>
+        <strong>{{ market_snapshot.advancing_sectors }}/{{ market_snapshot.sector_count }}</strong>
+        <span>sectors advancing</span>
+      </div>
+      <div class="snapshot-stat">
+        <span class="snapshot-label">Top sector</span>
+        <strong>{{ market_snapshot.strongest_sector.name if market_snapshot.strongest_sector else 'No data' }}</strong>
+        <span>{% if market_snapshot.strongest_sector %}{{ "{:+.2f}".format(market_snapshot.strongest_sector.change_pct) }}%{% endif %}</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ── Latest at a glance ────────────────────────────────────────────── -->
   <section class="section" aria-labelledby="latest-heading">
     <h2 id="latest-heading" class="section-title">

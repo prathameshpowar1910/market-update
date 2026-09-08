@@ -103,9 +103,11 @@ class TestHTMLGenerator:
         html = path.read_text(encoding="utf-8")
         assert sample_report.tldr[0] in html
 
-    def test_index_page_generated(self, generator, sample_report, sample_date):
+    def test_index_page_generated(self, generator, sample_report, india_data, intl_data, sample_date):
         path = generator.generate_index(
             latest_report=sample_report,
+            india=india_data,
+            intl=intl_data,
             archive_dates=["2026-09-06", "2026-09-05"],
             report_date=sample_date,
         )
@@ -114,6 +116,8 @@ class TestHTMLGenerator:
         assert "Market Digest" in html
         assert "2026-09-06" in html
         assert f'href="{sample_date.isoformat()}.html"' in html
+        assert "Today in numbers" in html
+        assert "NIFTY 50" in html
 
     def test_glossary_page_generated(self, generator, tmp_path):
         from src.glossary.manager import GlossaryManager

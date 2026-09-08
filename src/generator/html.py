@@ -124,16 +124,21 @@ class HTMLGenerator:
     def generate_index(
         self,
         latest_report: DailyReport,
+        india: IndiaMarketData,
+        intl: InternationalMarketData,
         archive_dates: list[str],
         report_date: date,
     ) -> Path:
         """Generate the homepage with latest report summary + archive."""
         context = {
             "report": latest_report,
+            "india": india,
+            "intl": intl,
             "archive_dates": archive_dates,
             "report_date": report_date,
             "date_str": format_date_iso(report_date),
             "date_display": format_date_display(report_date),
+            "market_snapshot": self._market_snapshot(india),
         }
         html = self._render("index.html", context)
         return self._write("index.html", html)
@@ -172,7 +177,7 @@ class HTMLGenerator:
         entries = manager.all_entries()
         paths = {
             "daily":    self.generate_daily(report, india, intl, news, entries, report_date),
-            "index":    self.generate_index(report, archive_dates, report_date),
+            "index":    self.generate_index(report, india, intl, archive_dates, report_date),
             "glossary": self.generate_glossary(manager),
         }
         log.info("HTML generation complete: %d pages", len(paths))
