@@ -2392,5 +2392,19 @@
     "definition": "A pre-IPO allocation of shares sold to high-profile institutional investors to boost confidence prior to the public issue.",
     "category": "market-structure",
     "added_date": "2026-09-09"
+  },
+  {
+    "term": "Imported Inflation",
+    "slug": "imported-inflation",
+    "definition": "A rise in domestic price levels caused by an increase in the cost of imported raw materials and commodities, such as crude oil.",
+    "category": "macro",
+    "added_date": "2026-09-10"
+  },
+  {
+    "term": "Safe-Haven Asset",
+    "slug": "safe-haven-asset",
+    "definition": "An investment that is expected to retain or increase its value during periods of market downturn or geopolitical instability, such as gold.",
+    "category": "macro",
+    "added_date": "2026-09-10"
   }
 ]
