@@ -2406,5 +2406,19 @@
     "definition": "An investment that is expected to retain or increase its value during periods of market downturn or geopolitical instability, such as gold.",
     "category": "macro",
     "added_date": "2026-09-10"
+  },
+  {
+    "term": "Producer Price Index (PPI)",
+    "slug": "producer-price-index-ppi",
+    "definition": "An economic indicator that measures the average change over time in the selling prices received by domestic producers for their output, serving as an early indicator of consumer inflation.",
+    "category": "macro",
+    "added_date": "2026-09-11"
+  },
+  {
+    "term": "Treasury Yield",
+    "slug": "treasury-yield",
+    "definition": "The interest rate paid by the government on its debt obligations, which rises when market demand for bonds falls and signals higher interest rate expectations.",
+    "category": "fixed-income",
+    "added_date": "2026-09-11"
   }
 ]
