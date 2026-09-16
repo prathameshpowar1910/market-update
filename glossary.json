@@ -2427,5 +2427,19 @@
     "definition": "A single trade involving a large quantity of shares (typically over 500,000 shares or a minimum value) executed between two institutional parties.",
     "category": "market-structure",
     "added_date": "2026-09-12"
+  },
+  {
+    "term": "Rate Tightening",
+    "slug": "rate-tightening",
+    "definition": "Actions taken by a central bank to raise benchmark interest rates in order to reduce money supply and curb rising inflation.",
+    "category": "macro",
+    "added_date": "2026-09-17"
+  },
+  {
+    "term": "Cross-Derivatives",
+    "slug": "cross-derivatives",
+    "definition": "Financial derivative structures whose valuations or contracts span across multiple asset classes or linked financial instruments.",
+    "category": "derivatives",
+    "added_date": "2026-09-17"
   }
 ]
