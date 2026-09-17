@@ -2441,5 +2441,19 @@
     "definition": "Financial derivative structures whose valuations or contracts span across multiple asset classes or linked financial instruments.",
     "category": "derivatives",
     "added_date": "2026-09-17"
+  },
+  {
+    "term": "Anchor Investor",
+    "slug": "anchor-investor",
+    "definition": "Institutional investors who are invited to subscribe to shares before an Initial Public Offering (IPO) opens to the public, helping build confidence and establish a baseline price.",
+    "category": "market-structure",
+    "added_date": "2026-09-18"
+  },
+  {
+    "term": "Revenue Misstatement",
+    "slug": "revenue-misstatement",
+    "definition": "The illegal or improper reporting of sales figures on financial statements to make a company look more profitable than it actually is.",
+    "category": "fundamentals",
+    "added_date": "2026-09-18"
   }
 ]
