@@ -2455,5 +2455,12 @@
     "definition": "The illegal or improper reporting of sales figures on financial statements to make a company look more profitable than it actually is.",
     "category": "fundamentals",
     "added_date": "2026-09-18"
+  },
+  {
+    "term": "Yield Spread",
+    "slug": "yield-spread",
+    "definition": "The difference in interest rates paid by two different bonds, often used to gauge comparative credit risk or fiscal health between nations.",
+    "category": "fixed-income",
+    "added_date": "2026-09-19"
   }
 ]
