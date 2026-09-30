@@ -2462,5 +2462,19 @@
     "definition": "The difference in interest rates paid by two different bonds, often used to gauge comparative credit risk or fiscal health between nations.",
     "category": "fixed-income",
     "added_date": "2026-09-19"
+  },
+  {
+    "term": "Bond Yield",
+    "slug": "bond-yield",
+    "definition": "The return an investor receives annually from holding a bond, expressed as a percentage of its current market price.",
+    "category": "fixed-income",
+    "added_date": "2026-10-01"
+  },
+  {
+    "term": "Monetary Tightening",
+    "slug": "monetary-tightening",
+    "definition": "Action taken by a central bank to reduce money supply and raise interest rates to curb high inflation.",
+    "category": "macro",
+    "added_date": "2026-10-01"
   }
 ]
