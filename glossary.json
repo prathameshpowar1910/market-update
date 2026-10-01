@@ -2476,5 +2476,12 @@
     "definition": "Action taken by a central bank to reduce money supply and raise interest rates to curb high inflation.",
     "category": "macro",
     "added_date": "2026-10-01"
+  },
+  {
+    "term": "Gilt",
+    "slug": "gilt",
+    "definition": "A high-grade government bond issued by the British government.",
+    "category": "fixed-income",
+    "added_date": "2026-10-02"
   }
 ]
