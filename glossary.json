@@ -2497,5 +2497,12 @@
     "definition": "Bonds or debt instruments issued by a national government to raise money for government spending.",
     "category": "fixed-income",
     "added_date": "2026-10-06"
+  },
+  {
+    "term": "Operating Update",
+    "slug": "operating-update",
+    "definition": "A preliminary summary released by a company highlighting operational metrics and business performance before formal quarterly financial statements.",
+    "category": "fundamentals",
+    "added_date": "2026-10-07"
   }
 ]
