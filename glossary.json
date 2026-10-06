@@ -2483,5 +2483,19 @@
     "definition": "A high-grade government bond issued by the British government.",
     "category": "fixed-income",
     "added_date": "2026-10-02"
+  },
+  {
+    "term": "Contagion",
+    "slug": "contagion",
+    "definition": "The likelihood that financial distress in one country, market, or institution will spread to others across borders or sectors.",
+    "category": "macro",
+    "added_date": "2026-10-06"
+  },
+  {
+    "term": "Sovereign Debt",
+    "slug": "sovereign-debt",
+    "definition": "Bonds or debt instruments issued by a national government to raise money for government spending.",
+    "category": "fixed-income",
+    "added_date": "2026-10-06"
   }
 ]
