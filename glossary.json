@@ -2504,5 +2504,12 @@
     "definition": "A preliminary summary released by a company highlighting operational metrics and business performance before formal quarterly financial statements.",
     "category": "fundamentals",
     "added_date": "2026-10-07"
+  },
+  {
+    "term": "Margin Trading Facility (MTF)",
+    "slug": "margin-trading-facility-mtf",
+    "definition": "A feature offered by brokerages allowing investors to purchase stocks by paying a fraction of the value as cash while borrowing the balance.",
+    "category": "market-structure",
+    "added_date": "2026-10-10"
   }
 ]
