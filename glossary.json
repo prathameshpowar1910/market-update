@@ -2511,5 +2511,12 @@
     "definition": "A feature offered by brokerages allowing investors to purchase stocks by paying a fraction of the value as cash while borrowing the balance.",
     "category": "market-structure",
     "added_date": "2026-10-10"
+  },
+  {
+    "term": "Risk-off",
+    "slug": "risk-off",
+    "definition": "A market environment where investors shift capital away from high-risk assets like stocks toward safer assets like cash or government bonds due to economic uncertainty.",
+    "category": "macro",
+    "added_date": "2026-10-17"
   }
 ]
