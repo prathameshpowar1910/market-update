@@ -2518,5 +2518,12 @@
     "definition": "A market environment where investors shift capital away from high-risk assets like stocks toward safer assets like cash or government bonds due to economic uncertainty.",
     "category": "macro",
     "added_date": "2026-10-17"
+  },
+  {
+    "term": "AT1 Bonds",
+    "slug": "at1-bonds",
+    "definition": "Additional Tier-1 bonds are high-yield, perpetual bank bonds with no fixed maturity date that can be written off or converted into equity if capital falls below regulatory limits.",
+    "category": "fixed-income",
+    "added_date": "2026-10-23"
   }
 ]
