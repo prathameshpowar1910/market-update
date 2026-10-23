@@ -2525,5 +2525,12 @@
     "definition": "Additional Tier-1 bonds are high-yield, perpetual bank bonds with no fixed maturity date that can be written off or converted into equity if capital falls below regulatory limits.",
     "category": "fixed-income",
     "added_date": "2026-10-23"
+  },
+  {
+    "term": "Net Interest Income",
+    "slug": "net-interest-income",
+    "definition": "The financial margin between the revenue a lender earns from interest-bearing assets and the expenses paid on deposits or debt.",
+    "category": "fundamentals",
+    "added_date": "2026-10-24"
   }
 ]
