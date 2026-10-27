@@ -2532,5 +2532,12 @@
     "definition": "The financial margin between the revenue a lender earns from interest-bearing assets and the expenses paid on deposits or debt.",
     "category": "fundamentals",
     "added_date": "2026-10-24"
+  },
+  {
+    "term": "Risk-On Tone",
+    "slug": "risk-on-tone",
+    "definition": "A market environment where investors exhibit high risk tolerance and aggressively buy equities or higher-yielding assets.",
+    "category": "market-structure",
+    "added_date": "2026-10-28"
   }
 ]
