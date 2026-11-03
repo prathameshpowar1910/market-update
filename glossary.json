@@ -2539,5 +2539,19 @@
     "definition": "A market environment where investors exhibit high risk tolerance and aggressively buy equities or higher-yielding assets.",
     "category": "market-structure",
     "added_date": "2026-10-28"
+  },
+  {
+    "term": "Certificate of Deposit (CD)",
+    "slug": "certificate-of-deposit-cd",
+    "definition": "A short-term debt security issued by banks to raise capital, offering a fixed yield until maturity.",
+    "category": "fixed-income",
+    "added_date": "2026-11-03"
+  },
+  {
+    "term": "Foreign Portfolio Investor (FPI)",
+    "slug": "foreign-portfolio-investor-fpi",
+    "definition": "Foreign entities holding non-controlling investments in a country's equities, bonds, or monetary assets.",
+    "category": "market-structure",
+    "added_date": "2026-11-03"
   }
 ]
