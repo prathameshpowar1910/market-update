@@ -2553,5 +2553,12 @@
     "definition": "Foreign entities holding non-controlling investments in a country's equities, bonds, or monetary assets.",
     "category": "market-structure",
     "added_date": "2026-11-03"
+  },
+  {
+    "term": "Front-running",
+    "slug": "front-running",
+    "definition": "The illegal practice of entering a stock trade with advance, non-public knowledge of a pending large transaction that will move the stock's price.",
+    "category": "market-structure",
+    "added_date": "2026-11-04"
   }
 ]
