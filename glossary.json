@@ -2560,5 +2560,12 @@
     "definition": "The illegal practice of entering a stock trade with advance, non-public knowledge of a pending large transaction that will move the stock's price.",
     "category": "market-structure",
     "added_date": "2026-11-04"
+  },
+  {
+    "term": "Current Account Deficit",
+    "slug": "current-account-deficit",
+    "definition": "A measurement of a country's trade where the value of imported goods and services exceeds the value of exported ones.",
+    "category": "macro",
+    "added_date": "2026-11-05"
   }
 ]
