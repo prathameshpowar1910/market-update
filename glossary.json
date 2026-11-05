@@ -2567,5 +2567,12 @@
     "definition": "A measurement of a country's trade where the value of imported goods and services exceeds the value of exported ones.",
     "category": "macro",
     "added_date": "2026-11-05"
+  },
+  {
+    "term": "Midterm Elections",
+    "slug": "midterm-elections",
+    "definition": "US elections held halfway through a president's four-year term that can shift the balance of power in Congress and influence economic policy.",
+    "category": "macro",
+    "added_date": "2026-11-06"
   }
 ]
