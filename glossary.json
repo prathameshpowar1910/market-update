@@ -2574,5 +2574,12 @@
     "definition": "US elections held halfway through a president's four-year term that can shift the balance of power in Congress and influence economic policy.",
     "category": "macro",
     "added_date": "2026-11-06"
+  },
+  {
+    "term": "Foreign Capital Inflows",
+    "slug": "foreign-capital-inflows",
+    "definition": "Net domestic investment originating from foreign investors, which strengthens local currency and stock valuations.",
+    "category": "macro",
+    "added_date": "2026-11-07"
   }
 ]
