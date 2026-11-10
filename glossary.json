@@ -2581,5 +2581,19 @@
     "definition": "Net domestic investment originating from foreign investors, which strengthens local currency and stock valuations.",
     "category": "macro",
     "added_date": "2026-11-07"
+  },
+  {
+    "term": "Consumer Price Index (CPI)",
+    "slug": "consumer-price-index-cpi",
+    "definition": "A macroeconomic metric that tracks the average change in prices paid by consumers for goods and services, serving as a primary indicator of inflation.",
+    "category": "macro",
+    "added_date": "2026-11-11"
+  },
+  {
+    "term": "Rate Hike",
+    "slug": "rate-hike",
+    "definition": "An action taken by a central bank to increase benchmark interest rates in order to cool down an overheating economy and tame rising inflation.",
+    "category": "macro",
+    "added_date": "2026-11-11"
   }
 ]
