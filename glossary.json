@@ -2595,5 +2595,12 @@
     "definition": "An action taken by a central bank to increase benchmark interest rates in order to cool down an overheating economy and tame rising inflation.",
     "category": "macro",
     "added_date": "2026-11-11"
+  },
+  {
+    "term": "Bond Switch",
+    "slug": "bond-switch",
+    "definition": "A transaction where a issuer buys back shorter-dated debt from investors and exchanges it for longer-dated bonds to manage maturity risk.",
+    "category": "fixed-income",
+    "added_date": "2026-11-12"
   }
 ]
