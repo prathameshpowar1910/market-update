@@ -2602,5 +2602,12 @@
     "definition": "A transaction where a issuer buys back shorter-dated debt from investors and exchanges it for longer-dated bonds to manage maturity risk.",
     "category": "fixed-income",
     "added_date": "2026-11-12"
+  },
+  {
+    "term": "Retail Inflation",
+    "slug": "retail-inflation",
+    "definition": "The rate of price increase for goods and services purchased directly by end consumers, typically measured by the Consumer Price Index (CPI).",
+    "category": "macro",
+    "added_date": "2026-11-13"
   }
 ]
