@@ -2609,5 +2609,12 @@
     "definition": "The rate of price increase for goods and services purchased directly by end consumers, typically measured by the Consumer Price Index (CPI).",
     "category": "macro",
     "added_date": "2026-11-13"
+  },
+  {
+    "term": "Hawkish",
+    "slug": "hawkish",
+    "definition": "A central bank policy stance favoring higher interest rates to prevent inflation and curb economic overheating.",
+    "category": "macro",
+    "added_date": "2026-11-14"
   }
 ]
