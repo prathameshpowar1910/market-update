@@ -2616,5 +2616,12 @@
     "definition": "A central bank policy stance favoring higher interest rates to prevent inflation and curb economic overheating.",
     "category": "macro",
     "added_date": "2026-11-14"
+  },
+  {
+    "term": "Share Buyback",
+    "slug": "share-buyback",
+    "definition": "When a company repurchases its own stock from the open market, reducing outstanding shares and increasing per-share valuation metrics.",
+    "category": "market-structure",
+    "added_date": "2026-11-19"
   }
 ]
