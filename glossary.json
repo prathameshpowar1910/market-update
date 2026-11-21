@@ -2623,5 +2623,19 @@
     "definition": "When a company repurchases its own stock from the open market, reducing outstanding shares and increasing per-share valuation metrics.",
     "category": "market-structure",
     "added_date": "2026-11-19"
+  },
+  {
+    "term": "Short Unwinding",
+    "slug": "short-unwinding",
+    "definition": "The purchase of assets by traders to close out bearish bets (short positions), often causing rapid upward price moves.",
+    "category": "derivatives",
+    "added_date": "2026-11-21"
+  },
+  {
+    "term": "Correction",
+    "slug": "correction",
+    "definition": "A decline of 10% or more in the price of a market index or security from its recent peak.",
+    "category": "technical-analysis",
+    "added_date": "2026-11-21"
   }
 ]
