@@ -2637,5 +2637,19 @@
     "definition": "A decline of 10% or more in the price of a market index or security from its recent peak.",
     "category": "technical-analysis",
     "added_date": "2026-11-21"
+  },
+  {
+    "term": "Downgrade Watch",
+    "slug": "downgrade-watch",
+    "definition": "A formal notice by a credit rating agency indicating that a company's credit score is being reviewed for a potential reduction.",
+    "category": "fixed-income",
+    "added_date": "2026-11-26"
+  },
+  {
+    "term": "Sticky Inflation",
+    "slug": "sticky-inflation",
+    "definition": "A condition where prices for goods and services remain resistant to falling, despite central bank interest rate hikes or slowing growth.",
+    "category": "macro",
+    "added_date": "2026-11-26"
   }
 ]
